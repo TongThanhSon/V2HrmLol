@@ -131,6 +131,7 @@ namespace ProfileDAL.Repositories
                     var data = Map<HUJobBandInputDTO, HUJobBand>(param, new HUJobBand());
                     data.STATUS = -1;
                     data.MODIFIED_DATE = DateTime.Now;
+                    data.MODIFIED_BY = _appContext.UserName;
                     var result = await _appContext.HUJobBands.AddAsync(data);
                     await _appContext.SaveChangesAsync();
                     return new ResultWithError(data);
@@ -148,7 +149,7 @@ namespace ProfileDAL.Repositories
         {
             try
             {
-                var query = from p in _appContext.HUJobBands where ids.Contains(p.ID) select p;
+                var query = from p in _appContext.HUJobBands where ids.Contains((int)p.ID) select p;
                 foreach(var item in query)
                 {
                     item.STATUS = status;
@@ -168,7 +169,7 @@ namespace ProfileDAL.Repositories
         {
             try
             {
-                var query = from p in _appContext.HUJobBands where ids.Contains(p.ID) select p;
+                var query = from p in _appContext.HUJobBands where ids.Contains((int)p.ID) select p;
                 foreach (var item in query)
                 {
                     item.STATUS = item.STATUS ==0?-1:0;
@@ -188,7 +189,7 @@ namespace ProfileDAL.Repositories
         {
             try
             {
-                var query = from p in _appContext.HUJobBands where ids.Contains(p.ID) select p;
+                var query = from p in _appContext.HUJobBands where ids.Contains((int)p.ID) select p;
                 foreach (var item in query)
                 {
                     _appContext.HUJobBands.Remove(item);
