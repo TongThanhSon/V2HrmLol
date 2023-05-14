@@ -26,7 +26,7 @@ namespace ProfileDAL.Models
         [MaxLength(5)]
         public string LEVEL_TO { get; set; }
 
-        public int STATUS { get; set; }
+        public int? STATUS { get; set; }
 
         public DateTime? CREATED_DATE { get; set; }
 
