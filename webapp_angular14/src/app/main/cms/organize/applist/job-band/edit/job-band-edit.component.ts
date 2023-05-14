@@ -224,6 +224,9 @@ export class JobBandEditComponent implements OnInit {
 
     let param = this.convertModel(this.model);
 
+
+
+    
     this._coreService.Post("hr/job-band/update", param).subscribe(
       (res: any) => {
         //check error
