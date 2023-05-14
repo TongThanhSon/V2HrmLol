@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { AppLayoutCompnent } from './applayout.component';
 import { ToolbarModule } from '../components/toolbar/toolbar.module';
 import { SidebarModule } from '../components/sidebar/sidebar.module';
-import { TanleicaLibModule } from 'tanleica-lib'
 
 @NgModule({
     declarations: [
@@ -16,7 +15,6 @@ import { TanleicaLibModule } from 'tanleica-lib'
         CommonModule,
         ToolbarModule,
         SidebarModule,
-        TanleicaLibModule,
     ],
     exports: [
         AppLayoutCompnent,
