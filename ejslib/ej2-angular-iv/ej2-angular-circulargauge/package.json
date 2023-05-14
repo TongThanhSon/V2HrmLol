@@ -1,0 +1,89 @@
+{
+  "_from": "@syncfusion/ej2-angular-circulargauge@*",
+  "_id": "@syncfusion/ej2-angular-circulargauge@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-iFKu3yl/NERSmOFIaK37ngYicXhtBXrzzPeyllef5bdNyK5njd8S1b4mIS5yFfQRtJ5fRU8DBnTkosQ+cPoxww==",
+  "_location": "/@syncfusion/ej2-angular-circulargauge",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-circulargauge@*",
+    "name": "@syncfusion/ej2-angular-circulargauge",
+    "escapedName": "@syncfusion%2fej2-angular-circulargauge",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-circulargauge/-/ej2-angular-circulargauge-20.1.55.tgz",
+  "_shasum": "3ec533e02a4bf4b3909b2cd05c8fa1d697e7b2f4",
+  "_spec": "@syncfusion/ej2-angular-circulargauge@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-circulargauge": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 CircularGauge Components for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-circulargauge.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-circulargauge.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-circulargauge.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-circulargauge.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-circulargauge.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-circulargauge.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-circulargauge.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-circulargauge.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-circulargauge.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-circulargauge.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "ej2-circulargauge",
+    "web-components",
+    "circular-gauge",
+    "annotation",
+    "scale",
+    "range",
+    "axis",
+    "pointer",
+    "tooltip",
+    "thermometer",
+    "container",
+    "typescript",
+    "angular",
+    "ng-circulargauge",
+    "ej2-ng-circulargauge"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-circulargauge.mjs",
+  "name": "@syncfusion/ej2-angular-circulargauge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-circulargauge.d.ts",
+  "version": "20.1.55"
+}

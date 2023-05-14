@@ -1,0 +1,85 @@
+{
+  "_from": "@syncfusion/ej2-angular-gantt@*",
+  "_id": "@syncfusion/ej2-angular-gantt@20.1.60",
+  "_inBundle": false,
+  "_integrity": "sha512-uyWpW0R2bd9bcFQHyaAZpw9ATqT8Rg3URMeJlCvlHG0Okfb0OuegWZWjPDYCKSOyaJ2J5r834jkL1iwKy+r4aw==",
+  "_location": "/@syncfusion/ej2-angular-gantt",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-gantt@*",
+    "name": "@syncfusion/ej2-angular-gantt",
+    "escapedName": "@syncfusion%2fej2-angular-gantt",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-gantt/-/ej2-angular-gantt-20.1.60.tgz",
+  "_shasum": "b5a21c0dfd3999d39aeacb5dc4a34ec8490dca8e",
+  "_spec": "@syncfusion/ej2-angular-gantt@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-gantt": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 Gantt Component for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-gantt.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-gantt.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-gantt.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-gantt.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-gantt.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-gantt.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-gantt.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-gantt.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-gantt.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-gantt.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "ej2-gantt",
+    "syncfusion",
+    "web-components",
+    "gantt-chart",
+    "gantt",
+    "project",
+    "timeline",
+    "tasks",
+    "angular",
+    "ng-gantt",
+    "ej2-angular-gantt",
+    "ej2-ng-gantt"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-gantt.mjs",
+  "name": "@syncfusion/ej2-angular-gantt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-gantt.d.ts",
+  "version": "20.1.60"
+}

@@ -2,6 +2,8 @@
 // Email: kythuat@tlavietnam.vn
 // www.tlavietnam.vn
 // =============================
+using Common.DAO;
+using Common.DataContractCore.Base;
 using ProfileDAL.EntityFrameworkCore;
 using ProfileDAL.Repositories;
 using System;
@@ -12,6 +14,7 @@ namespace ProfileDAL
     public class ProfileBusiness : System.IDisposable, IProfileBusiness
     {
         readonly ProfileDbContext _context;
+        readonly IDBManager<DBAction.System> _dbManager;
         // List Progile
         ICompanyInfoRepository _CompanyInfoRepository;
         IGroupPositionRepository _GroupPositionRepository;
@@ -66,6 +69,11 @@ namespace ProfileDAL
         ICandidateRepository _CandidateRepository;
 
         IPositionPaperRepository _PositionPaperRepository;
+        public ProfileBusiness(ProfileDbContext context, IDBManager<DBAction.System> dbManager)
+        {
+            _context = context;
+            _dbManager = dbManager;
+        }
         public ProfileBusiness(ProfileDbContext context)
         {
             _context = context;
@@ -97,7 +105,7 @@ namespace ProfileDAL
             get
             {
                 if (_UserOrganiRepository == null)
-                    _UserOrganiRepository = new UserOrganiRepository(_context);
+                    _UserOrganiRepository = new UserOrganiRepository(_context, _dbManager);
 
                 return _UserOrganiRepository;
 

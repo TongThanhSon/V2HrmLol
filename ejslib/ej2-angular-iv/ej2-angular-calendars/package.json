@@ -1,0 +1,112 @@
+{
+  "_from": "@syncfusion/ej2-angular-calendars@*",
+  "_id": "@syncfusion/ej2-angular-calendars@20.1.58",
+  "_inBundle": false,
+  "_integrity": "sha512-oNc1T9rgKq2uFg9rAEQPpSe1YwOLEq5KYIJiVwbOKdMzOXjUg8IkU3km9YmYJF86pW5t2kwiK0LWiXWeUuYqww==",
+  "_location": "/@syncfusion/ej2-angular-calendars",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-calendars@*",
+    "name": "@syncfusion/ej2-angular-calendars",
+    "escapedName": "@syncfusion%2fej2-angular-calendars",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-calendars/-/ej2-angular-calendars-20.1.58.tgz",
+  "_shasum": "711d6b5258945db4c62d0e2e3306b95668c56220",
+  "_spec": "@syncfusion/ej2-angular-calendars@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-calendars": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "A complete package of date or time components with built-in features such as date formatting, inline editing, multiple (range) selection, range restriction, month and year selection, strict mode, and globalization. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-calendars.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-calendars.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-calendars.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-calendars.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-calendars.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-calendars.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-calendars.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-calendars.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-calendars.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-calendars.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "calendar",
+    "date",
+    "time",
+    "datetime",
+    "daterange",
+    "culture",
+    "month",
+    "year",
+    "decade",
+    "timepicker",
+    "strict-mode",
+    "step",
+    "interval",
+    "min",
+    "max",
+    "globalization",
+    "datepicker",
+    "daterangepicker",
+    "datetimepicker",
+    "enable-persistence",
+    "locale",
+    "value",
+    "format",
+    "week-number",
+    "enable-rtl",
+    "presets",
+    "min-days",
+    "max-days",
+    "start-date",
+    "end-date",
+    "time-format",
+    "rangepicker",
+    "month-picker",
+    "angular",
+    "ng",
+    "ng-calendars",
+    "ej2-ng-calendars"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-calendars.mjs",
+  "name": "@syncfusion/ej2-angular-calendars",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-calendars.d.ts",
+  "version": "20.1.58"
+}

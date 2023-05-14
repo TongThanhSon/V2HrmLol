@@ -1,0 +1,82 @@
+{
+  "_from": "@syncfusion/ej2-angular-pivotview@*",
+  "_id": "@syncfusion/ej2-angular-pivotview@20.1.58",
+  "_inBundle": false,
+  "_integrity": "sha512-jcr/IE6p8HG7Vje5Bukb2BDuUqvRGqXlsB24qzkW+JQ2XPO1bS0sWi0ynZj+UDA2OUfhx4OicuoBxdSq5SYaZA==",
+  "_location": "/@syncfusion/ej2-angular-pivotview",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-pivotview@*",
+    "name": "@syncfusion/ej2-angular-pivotview",
+    "escapedName": "@syncfusion%2fej2-angular-pivotview",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-pivotview/-/ej2-angular-pivotview-20.1.58.tgz",
+  "_shasum": "823a67c55731d03da040de5cbe119cd5d7c8ce1f",
+  "_spec": "@syncfusion/ej2-angular-pivotview@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-pivotview": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "The pivot grid, or pivot table, is used to visualize large sets of relational data in a cross-tabular format, similar to an Excel pivot table. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-pivotview.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-pivotview.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-pivotview.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-pivotview.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-pivotview.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-pivotview.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-pivotview.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-pivotview.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-pivotview.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-pivotview.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2-pivotview",
+    "pivotview",
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "data",
+    "table",
+    "angular",
+    "ng-pivotview",
+    "ej2-ng-pivotview"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-pivotview.mjs",
+  "name": "@syncfusion/ej2-angular-pivotview",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-pivotview.d.ts",
+  "version": "20.1.58"
+}

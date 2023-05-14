@@ -1,0 +1,87 @@
+{
+  "_from": "@syncfusion/ej2-angular-progressbar@*",
+  "_id": "@syncfusion/ej2-angular-progressbar@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-eupB8a9KDY4M3Mj2Ptl/vhRYqZP3V9LgiQR3nGCE4vmqc4rDCM0P6ZPWqmQZ9Xpz7BmCQRkte9F4GxL20ierXA==",
+  "_location": "/@syncfusion/ej2-angular-progressbar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-progressbar@*",
+    "name": "@syncfusion/ej2-angular-progressbar",
+    "escapedName": "@syncfusion%2fej2-angular-progressbar",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-progressbar/-/ej2-angular-progressbar-20.1.55.tgz",
+  "_shasum": "740538e080782dabd8144d94b8264ffcdb7044ac",
+  "_spec": "@syncfusion/ej2-angular-progressbar@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-progressbar": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 ProgressBar Component for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-progressbar.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-progressbar.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-progressbar.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-progressbar.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-progressbar.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-progressbar.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-progressbar.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-progressbar.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-progressbar.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-progressbar.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2-progressbar",
+    "progressbar",
+    "syncfusion",
+    "web-components",
+    "Javascript",
+    "Typescript",
+    "data",
+    "progress bar",
+    "Progress Bar",
+    "ProgressBar",
+    "angular",
+    "ng-progressbar",
+    "angular-progressbar",
+    "ej2-ng-progressbar",
+    "ej2-angular-progressbar"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-progressbar.mjs",
+  "name": "@syncfusion/ej2-angular-progressbar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-progressbar.d.ts",
+  "version": "20.1.55"
+}

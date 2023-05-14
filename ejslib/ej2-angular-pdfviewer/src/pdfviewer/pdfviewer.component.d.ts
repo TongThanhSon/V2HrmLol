@@ -1,0 +1,95 @@
+import { ElementRef, ViewContainerRef, Renderer2, Injector } from '@angular/core';
+import { IComponentBase } from '@syncfusion/ej2-angular-base';
+import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+export declare const inputs: string[];
+export declare const outputs: string[];
+export declare const twoWays: string[];
+/**
+ * `ejs-pdfviewer` represents the Angular PdfViewer Component.
+ * ```html
+ * <ejs-pdfviewer></ejs-pdfviewer>
+ * ```
+ */
+export declare class PdfViewerComponent extends PdfViewer implements IComponentBase {
+    private ngEle;
+    private srenderer;
+    private viewContainerRef;
+    private injector;
+    context: any;
+    tagObjects: any;
+    addSignature: any;
+    ajaxRequestFailed: any;
+    ajaxRequestInitiate: any;
+    ajaxRequestSuccess: any;
+    annotationAdd: any;
+    annotationDoubleClick: any;
+    annotationMouseLeave: any;
+    annotationMouseover: any;
+    annotationMove: any;
+    annotationMoving: any;
+    annotationPropertiesChange: any;
+    annotationRemove: any;
+    annotationResize: any;
+    annotationSelect: any;
+    annotationUnSelect: any;
+    beforeAddFreeText: any;
+    bookmarkClick: any;
+    buttonFieldClick: any;
+    commentAdd: any;
+    commentDelete: any;
+    commentEdit: any;
+    commentSelect: any;
+    commentStatusChanged: any;
+    created: any;
+    documentLoad: any;
+    documentLoadFailed: any;
+    documentUnload: any;
+    downloadEnd: any;
+    downloadStart: any;
+    exportFailed: any;
+    exportStart: any;
+    exportSuccess: any;
+    extractTextCompleted: any;
+    formFieldAdd: any;
+    formFieldClick: any;
+    formFieldDoubleClick: any;
+    formFieldFocusOut: any;
+    formFieldMouseLeave: any;
+    formFieldMouseover: any;
+    formFieldMove: any;
+    formFieldPropertiesChange: any;
+    formFieldRemove: any;
+    formFieldResize: any;
+    formFieldSelect: any;
+    formFieldUnselect: any;
+    hyperlinkClick: any;
+    hyperlinkMouseOver: any;
+    importFailed: any;
+    importStart: any;
+    importSuccess: any;
+    moveSignature: any;
+    pageChange: any;
+    pageClick: any;
+    pageMouseover: any;
+    printEnd: any;
+    printStart: any;
+    removeSignature: any;
+    resizeSignature: any;
+    signaturePropertiesChange: any;
+    signatureSelect: any;
+    textSearchComplete: any;
+    textSearchHighlight: any;
+    textSearchStart: any;
+    textSelectionEnd: any;
+    textSelectionStart: any;
+    thumbnailClick: any;
+    validateFormFields: any;
+    zoomChange: any;
+    constructor(ngEle: ElementRef, srenderer: Renderer2, viewContainerRef: ViewContainerRef, injector: Injector);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
+    registerEvents: (eventList: string[]) => void;
+    addTwoWay: (propList: string[]) => void;
+}

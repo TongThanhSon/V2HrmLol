@@ -1,0 +1,98 @@
+import { ElementRef, ViewContainerRef, Renderer2, Injector } from '@angular/core';
+import { IComponentBase } from '@syncfusion/ej2-angular-base';
+import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
+import * as i0 from "@angular/core";
+export declare const inputs: string[];
+export declare const outputs: string[];
+export declare const twoWays: string[];
+/**
+ * `ejs-pdfviewer` represents the Angular PdfViewer Component.
+ * ```html
+ * <ejs-pdfviewer></ejs-pdfviewer>
+ * ```
+ */
+export declare class PdfViewerComponent extends PdfViewer implements IComponentBase {
+    private ngEle;
+    private srenderer;
+    private viewContainerRef;
+    private injector;
+    context: any;
+    tagObjects: any;
+    addSignature: any;
+    ajaxRequestFailed: any;
+    ajaxRequestInitiate: any;
+    ajaxRequestSuccess: any;
+    annotationAdd: any;
+    annotationDoubleClick: any;
+    annotationMouseLeave: any;
+    annotationMouseover: any;
+    annotationMove: any;
+    annotationMoving: any;
+    annotationPropertiesChange: any;
+    annotationRemove: any;
+    annotationResize: any;
+    annotationSelect: any;
+    annotationUnSelect: any;
+    beforeAddFreeText: any;
+    bookmarkClick: any;
+    buttonFieldClick: any;
+    commentAdd: any;
+    commentDelete: any;
+    commentEdit: any;
+    commentSelect: any;
+    commentStatusChanged: any;
+    created: any;
+    documentLoad: any;
+    documentLoadFailed: any;
+    documentUnload: any;
+    downloadEnd: any;
+    downloadStart: any;
+    exportFailed: any;
+    exportStart: any;
+    exportSuccess: any;
+    extractTextCompleted: any;
+    formFieldAdd: any;
+    formFieldClick: any;
+    formFieldDoubleClick: any;
+    formFieldFocusOut: any;
+    formFieldMouseLeave: any;
+    formFieldMouseover: any;
+    formFieldMove: any;
+    formFieldPropertiesChange: any;
+    formFieldRemove: any;
+    formFieldResize: any;
+    formFieldSelect: any;
+    formFieldUnselect: any;
+    hyperlinkClick: any;
+    hyperlinkMouseOver: any;
+    importFailed: any;
+    importStart: any;
+    importSuccess: any;
+    moveSignature: any;
+    pageChange: any;
+    pageClick: any;
+    pageMouseover: any;
+    printEnd: any;
+    printStart: any;
+    removeSignature: any;
+    resizeSignature: any;
+    signaturePropertiesChange: any;
+    signatureSelect: any;
+    textSearchComplete: any;
+    textSearchHighlight: any;
+    textSearchStart: any;
+    textSelectionEnd: any;
+    textSelectionStart: any;
+    thumbnailClick: any;
+    validateFormFields: any;
+    zoomChange: any;
+    constructor(ngEle: ElementRef, srenderer: Renderer2, viewContainerRef: ViewContainerRef, injector: Injector);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+    ngAfterContentChecked(): void;
+    registerEvents: (eventList: string[]) => void;
+    addTwoWay: (propList: string[]) => void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<PdfViewerComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<PdfViewerComponent, "ejs-pdfviewer", never, { "DropdownFieldSettings": "DropdownFieldSettings"; "ajaxRequestSettings": "ajaxRequestSettings"; "annotationSelectorSettings": "annotationSelectorSettings"; "annotationSettings": "annotationSettings"; "annotations": "annotations"; "areaSettings": "areaSettings"; "arrowSettings": "arrowSettings"; "checkBoxFieldSettings": "checkBoxFieldSettings"; "circleSettings": "circleSettings"; "contextMenuOption": "contextMenuOption"; "contextMenuSettings": "contextMenuSettings"; "currentPageNumber": "currentPageNumber"; "customStamp": "customStamp"; "customStampSettings": "customStampSettings"; "dateTimeFormat": "dateTimeFormat"; "designerMode": "designerMode"; "disableContextMenuItems": "disableContextMenuItems"; "distanceSettings": "distanceSettings"; "documentPath": "documentPath"; "downloadFileName": "downloadFileName"; "drawingObject": "drawingObject"; "enableAnnotation": "enableAnnotation"; "enableAnnotationToolbar": "enableAnnotationToolbar"; "enableAutoComplete": "enableAutoComplete"; "enableBookmark": "enableBookmark"; "enableBookmarkStyles": "enableBookmarkStyles"; "enableCommentPanel": "enableCommentPanel"; "enableDesktopMode": "enableDesktopMode"; "enableDownload": "enableDownload"; "enableFormDesigner": "enableFormDesigner"; "enableFormDesignerToolbar": "enableFormDesignerToolbar"; "enableFormFields": "enableFormFields"; "enableFormFieldsValidation": "enableFormFieldsValidation"; "enableFreeText": "enableFreeText"; "enableHandwrittenSignature": "enableHandwrittenSignature"; "enableHyperlink": "enableHyperlink"; "enableImportAnnotationMeasurement": "enableImportAnnotationMeasurement"; "enableInkAnnotation": "enableInkAnnotation"; "enableMagnification": "enableMagnification"; "enableMeasureAnnotation": "enableMeasureAnnotation"; "enableMultiLineOverlap": "enableMultiLineOverlap"; "enableMultiPageAnnotation": "enableMultiPageAnnotation"; "enableNavigation": "enableNavigation"; "enableNavigationToolbar": "enableNavigationToolbar"; "enablePersistence": "enablePersistence"; "enablePinchZoom": "enablePinchZoom"; "enablePrint": "enablePrint"; "enablePrintRotation": "enablePrintRotation"; "enableRtl": "enableRtl"; "enableShapeAnnotation": "enableShapeAnnotation"; "enableShapeLabel": "enableShapeLabel"; "enableStampAnnotations": "enableStampAnnotations"; "enableStickyNotesAnnotation": "enableStickyNotesAnnotation"; "enableTextMarkupAnnotation": "enableTextMarkupAnnotation"; "enableTextMarkupResizer": "enableTextMarkupResizer"; "enableTextSearch": "enableTextSearch"; "enableTextSelection": "enableTextSelection"; "enableThumbnail": "enableThumbnail"; "enableToolbar": "enableToolbar"; "enableZoomOptimization": "enableZoomOptimization"; "exportAnnotationFileName": "exportAnnotationFileName"; "formFieldCollections": "formFieldCollections"; "formFields": "formFields"; "freeTextSettings": "freeTextSettings"; "handWrittenSignatureSettings": "handWrittenSignatureSettings"; "height": "height"; "hideSaveSignature": "hideSaveSignature"; "highlightSettings": "highlightSettings"; "hyperlinkOpenState": "hyperlinkOpenState"; "initialDialogSettings": "initialDialogSettings"; "initialFieldSettings": "initialFieldSettings"; "inkAnnotationSettings": "inkAnnotationSettings"; "interactionMode": "interactionMode"; "isAnnotationToolbarOpen": "isAnnotationToolbarOpen"; "isAnnotationToolbarVisible": "isAnnotationToolbarVisible"; "isBookmarkPanelOpen": "isBookmarkPanelOpen"; "isCommandPanelOpen": "isCommandPanelOpen"; "isDocumentEdited": "isDocumentEdited"; "isExtractText": "isExtractText"; "isFormDesignerToolbarVisible": "isFormDesignerToolbarVisible"; "isFormFieldDocument": "isFormFieldDocument"; "isInitialFieldToolbarSelection": "isInitialFieldToolbarSelection"; "isMaintainSelection": "isMaintainSelection"; "isSignatureEditable": "isSignatureEditable"; "isThumbnailViewOpen": "isThumbnailViewOpen"; "isValidFreeText": "isValidFreeText"; "lineSettings": "lineSettings"; "listBoxFieldSettings": "listBoxFieldSettings"; "locale": "locale"; "measurementSettings": "measurementSettings"; "pageCount": "pageCount"; "passwordFieldSettings": "passwordFieldSettings"; "perimeterSettings": "perimeterSettings"; "polygonSettings": "polygonSettings"; "printMode": "printMode"; "radioButtonFieldSettings": "radioButtonFieldSettings"; "radiusSettings": "radiusSettings"; "rectangleSettings": "rectangleSettings"; "restrictZoomRequest": "restrictZoomRequest"; "retryCount": "retryCount"; "scrollSettings": "scrollSettings"; "selectedItems": "selectedItems"; "serverActionSettings": "serverActionSettings"; "serviceUrl": "serviceUrl"; "shapeLabelSettings": "shapeLabelSettings"; "showNotificationDialog": "showNotificationDialog"; "signatureDialogSettings": "signatureDialogSettings"; "signatureFieldSettings": "signatureFieldSettings"; "signatureFitMode": "signatureFitMode"; "stampSettings": "stampSettings"; "stickyNotesSettings": "stickyNotesSettings"; "strikethroughSettings": "strikethroughSettings"; "textFieldSettings": "textFieldSettings"; "textSearchColorSettings": "textSearchColorSettings"; "tileRenderingSettings": "tileRenderingSettings"; "toolbarSettings": "toolbarSettings"; "underlineSettings": "underlineSettings"; "volumeSettings": "volumeSettings"; "width": "width"; "zoomMode": "zoomMode"; "zoomValue": "zoomValue"; }, { "addSignature": "addSignature"; "ajaxRequestFailed": "ajaxRequestFailed"; "ajaxRequestInitiate": "ajaxRequestInitiate"; "ajaxRequestSuccess": "ajaxRequestSuccess"; "annotationAdd": "annotationAdd"; "annotationDoubleClick": "annotationDoubleClick"; "annotationMouseLeave": "annotationMouseLeave"; "annotationMouseover": "annotationMouseover"; "annotationMove": "annotationMove"; "annotationMoving": "annotationMoving"; "annotationPropertiesChange": "annotationPropertiesChange"; "annotationRemove": "annotationRemove"; "annotationResize": "annotationResize"; "annotationSelect": "annotationSelect"; "annotationUnSelect": "annotationUnSelect"; "beforeAddFreeText": "beforeAddFreeText"; "bookmarkClick": "bookmarkClick"; "buttonFieldClick": "buttonFieldClick"; "commentAdd": "commentAdd"; "commentDelete": "commentDelete"; "commentEdit": "commentEdit"; "commentSelect": "commentSelect"; "commentStatusChanged": "commentStatusChanged"; "created": "created"; "documentLoad": "documentLoad"; "documentLoadFailed": "documentLoadFailed"; "documentUnload": "documentUnload"; "downloadEnd": "downloadEnd"; "downloadStart": "downloadStart"; "exportFailed": "exportFailed"; "exportStart": "exportStart"; "exportSuccess": "exportSuccess"; "extractTextCompleted": "extractTextCompleted"; "formFieldAdd": "formFieldAdd"; "formFieldClick": "formFieldClick"; "formFieldDoubleClick": "formFieldDoubleClick"; "formFieldFocusOut": "formFieldFocusOut"; "formFieldMouseLeave": "formFieldMouseLeave"; "formFieldMouseover": "formFieldMouseover"; "formFieldMove": "formFieldMove"; "formFieldPropertiesChange": "formFieldPropertiesChange"; "formFieldRemove": "formFieldRemove"; "formFieldResize": "formFieldResize"; "formFieldSelect": "formFieldSelect"; "formFieldUnselect": "formFieldUnselect"; "hyperlinkClick": "hyperlinkClick"; "hyperlinkMouseOver": "hyperlinkMouseOver"; "importFailed": "importFailed"; "importStart": "importStart"; "importSuccess": "importSuccess"; "moveSignature": "moveSignature"; "pageChange": "pageChange"; "pageClick": "pageClick"; "pageMouseover": "pageMouseover"; "printEnd": "printEnd"; "printStart": "printStart"; "removeSignature": "removeSignature"; "resizeSignature": "resizeSignature"; "signaturePropertiesChange": "signaturePropertiesChange"; "signatureSelect": "signatureSelect"; "textSearchComplete": "textSearchComplete"; "textSearchHighlight": "textSearchHighlight"; "textSearchStart": "textSearchStart"; "textSelectionEnd": "textSelectionEnd"; "textSelectionStart": "textSelectionStart"; "thumbnailClick": "thumbnailClick"; "validateFormFields": "validateFormFields"; "zoomChange": "zoomChange"; }, never, never>;
+}

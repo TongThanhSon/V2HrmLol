@@ -1,0 +1,89 @@
+{
+  "_from": "@syncfusion/ej2-angular-layouts@*",
+  "_id": "@syncfusion/ej2-angular-layouts@20.1.58",
+  "_inBundle": false,
+  "_integrity": "sha512-c4j0hIVaX6fvPqiQP0Ecf3v3AQkk49OB44cODD/AuwHDo1AvDI0cVkJB148oVlPR1Esn0KJmuZ9fUgnewT3zAg==",
+  "_location": "/@syncfusion/ej2-angular-layouts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-layouts@*",
+    "name": "@syncfusion/ej2-angular-layouts",
+    "escapedName": "@syncfusion%2fej2-angular-layouts",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-layouts/-/ej2-angular-layouts-20.1.58.tgz",
+  "_shasum": "7784fc8e0332001e7acbfff0692208f6831c14bc",
+  "_spec": "@syncfusion/ej2-angular-layouts@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-layouts": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "A package of Essential JS 2 layout pure CSS components such as card and avatar. The card is used as small container to show content in specific structure, whereas the avatars are icons, initials or figures representing particular person. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-layouts.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-layouts.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-layouts.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-layouts.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-layouts.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-layouts.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-layouts.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-layouts.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-layouts.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-layouts.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "splitter",
+    "split-panes",
+    "split-layout",
+    "split-view",
+    "split-area",
+    "resizable-splitter",
+    "split-container",
+    "dashboardlayout",
+    "panels",
+    "angular-splitter",
+    "ng-splitter",
+    "angular-split-panes",
+    "ng-split-panes",
+    "angular-split-area",
+    "angular-split-layout",
+    "angular-split-view",
+    "angular-dashboardlayout"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-layouts.mjs",
+  "name": "@syncfusion/ej2-angular-layouts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-layouts.d.ts",
+  "version": "20.1.58"
+}

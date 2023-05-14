@@ -1,0 +1,80 @@
+{
+  "_from": "@syncfusion/ej2-angular-barcode-generator@*",
+  "_id": "@syncfusion/ej2-angular-barcode-generator@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-t4yTr032aG9C2nsh85wr7VunpsEP+ilAoo5ZOttJdSDPf6SlNprALIJunkWHQMeXc3PtxvYrH1s8vfbxJA9+vQ==",
+  "_location": "/@syncfusion/ej2-angular-barcode-generator",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-barcode-generator@*",
+    "name": "@syncfusion/ej2-angular-barcode-generator",
+    "escapedName": "@syncfusion%2fej2-angular-barcode-generator",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-barcode-generator/-/ej2-angular-barcode-generator-20.1.55.tgz",
+  "_shasum": "ba5f430548b3772773852caebf6cfae90f9fe1d0",
+  "_spec": "@syncfusion/ej2-angular-barcode-generator@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-barcode-generator": "*",
+    "@syncfusion/ej2-base": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Barcode generator component is a pure JavaScript library which will convert a string to Barcode and show it to the user. This supports major 1D and 2D barcodes including coda bar, code 128, QR Code. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-barcode-generator.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-barcode-generator.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-barcode-generator.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-barcode-generator.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-barcode-generator.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-barcode-generator.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-barcode-generator.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-barcode-generator.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-barcode-generator.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-barcode-generator.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "Syncfusion",
+    "web-components",
+    "barcode",
+    "angular",
+    "ng",
+    "ng-barcodes",
+    "ej2-ng-barcodes"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-barcode-generator.mjs",
+  "name": "@syncfusion/ej2-angular-barcode-generator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-barcode-generator.d.ts",
+  "version": "20.1.55"
+}

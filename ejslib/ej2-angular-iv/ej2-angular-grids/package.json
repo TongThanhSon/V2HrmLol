@@ -1,0 +1,87 @@
+{
+  "_from": "@syncfusion/ej2-angular-grids@*",
+  "_id": "@syncfusion/ej2-angular-grids@20.1.61",
+  "_inBundle": false,
+  "_integrity": "sha512-WtlZdjfCsVS54szk/kgmVd7yE1y1xByTGrv7aY1wZLqpjcXHeBYQ820kNepNKY1UdPTjfZXX21rYjXQWdzo8tw==",
+  "_location": "/@syncfusion/ej2-angular-grids",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-grids@*",
+    "name": "@syncfusion/ej2-angular-grids",
+    "escapedName": "@syncfusion%2fej2-angular-grids",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-grids/-/ej2-angular-grids-20.1.61.tgz",
+  "_shasum": "12335d58bf5690974d2595ce545749538b88ad47",
+  "_spec": "@syncfusion/ej2-angular-grids@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-grids": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Feature-rich JavaScript datagrid (datatable) control with built-in support for editing, filtering, grouping, paging, sorting, and exporting to Excel. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-grids.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-grids.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-grids.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-grids.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-grids.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-grids.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-grids.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-grids.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-grids.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-grids.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "ej2-grids",
+    "syncfusion",
+    "web-components",
+    "data-grid",
+    "data-table",
+    "grid",
+    "pager",
+    "data",
+    "table",
+    "Typescript",
+    "angular",
+    "ng-grids",
+    "ej2-angular-grids",
+    "ej2-ng-grids"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-grids.mjs",
+  "name": "@syncfusion/ej2-angular-grids",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-grids.d.ts",
+  "version": "20.1.61"
+}

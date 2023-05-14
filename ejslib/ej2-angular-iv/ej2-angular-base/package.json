@@ -1,0 +1,140 @@
+{
+  "_from": "@syncfusion/ej2-angular-base@*",
+  "_id": "@syncfusion/ej2-angular-base@19.8.0",
+  "_inBundle": false,
+  "_integrity": "sha512-heSmCrnka4CcYeU7VHSYA1tCgde5nDdpNHgdFYXUXZhIUy2VeYYmdMCEB0YlS3Q5+mOHUaXaF8oxshwB3vYP8A==",
+  "_location": "/@syncfusion/ej2-angular-base",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-base@*",
+    "name": "@syncfusion/ej2-angular-base",
+    "escapedName": "@syncfusion%2fej2-angular-base",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/",
+    "/@syncfusion/ej2-angular-barcode-generator",
+    "/@syncfusion/ej2-angular-buttons",
+    "/@syncfusion/ej2-angular-calendars",
+    "/@syncfusion/ej2-angular-charts",
+    "/@syncfusion/ej2-angular-circulargauge",
+    "/@syncfusion/ej2-angular-diagrams",
+    "/@syncfusion/ej2-angular-documenteditor",
+    "/@syncfusion/ej2-angular-dropdowns",
+    "/@syncfusion/ej2-angular-filemanager",
+    "/@syncfusion/ej2-angular-gantt",
+    "/@syncfusion/ej2-angular-grids",
+    "/@syncfusion/ej2-angular-heatmap",
+    "/@syncfusion/ej2-angular-inplace-editor",
+    "/@syncfusion/ej2-angular-inputs",
+    "/@syncfusion/ej2-angular-kanban",
+    "/@syncfusion/ej2-angular-layouts",
+    "/@syncfusion/ej2-angular-lineargauge",
+    "/@syncfusion/ej2-angular-lists",
+    "/@syncfusion/ej2-angular-maps",
+    "/@syncfusion/ej2-angular-navigations",
+    "/@syncfusion/ej2-angular-notifications",
+    "/@syncfusion/ej2-angular-pdfviewer",
+    "/@syncfusion/ej2-angular-pivotview",
+    "/@syncfusion/ej2-angular-popups",
+    "/@syncfusion/ej2-angular-progressbar",
+    "/@syncfusion/ej2-angular-querybuilder",
+    "/@syncfusion/ej2-angular-richtexteditor",
+    "/@syncfusion/ej2-angular-schedule",
+    "/@syncfusion/ej2-angular-splitbuttons",
+    "/@syncfusion/ej2-angular-spreadsheet",
+    "/@syncfusion/ej2-angular-treegrid",
+    "/@syncfusion/ej2-angular-treemap"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-base/-/ej2-angular-base-19.8.0.tgz",
+  "_shasum": "e5398d058a3596f0518db195963ba3d4a34720dd",
+  "_spec": "@syncfusion/ej2-angular-base@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "ghooks": {
+      "pre-commit": "gulp pre-commit",
+      "pre-push": "gulp pre-push",
+      "commit-msg": "gulp commit-msg"
+    }
+  },
+  "dependencies": {
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-icons": "*",
+    "core-js": "^3.4.8",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.5.4",
+    "zone.js": "^0.10.2"
+  },
+  "deprecated": false,
+  "description": "A common package of Essential JS 2 base Angular libraries, methods and class definitions",
+  "devDependencies": {
+    "@angular-devkit/schematics": "0.7.2",
+    "@angular/common": "2.2.1 - 4.10.0",
+    "@angular/compiler": "2.2.1 - 4.10.0",
+    "@angular/core": "2.2.1 - 4.10.0",
+    "@angular/forms": "2.2.1 - 4.10.0",
+    "@angular/http": "2.2.1 - 4.10.0",
+    "@angular/platform-browser": "2.2.1 - 4.10.0",
+    "@angular/platform-browser-dynamic": "2.2.1 - 4.10.0",
+    "@angular/router": "2.2.1 - 4.10.0",
+    "@schematics/angular": "0.7.2",
+    "@syncfusion/ej2-build": "*",
+    "@types/chai": "^3.4.28",
+    "@types/core-js": "0.9.39",
+    "@types/jasmine": "^2.2.29",
+    "@types/jasmine-ajax": "^3.1.27",
+    "@types/node": "^6.0.46",
+    "@types/requirejs": "^2.1.26",
+    "es6-module-loader": "^0.17.11",
+    "karma-systemjs": "^0.16.0",
+    "systemjs": "^0.19.40",
+    "systemjs-plugin-babel": "0.0.17"
+  },
+  "homepage": "https://www.syncfusion.com/angular-ui-components",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "ej2-angular-base",
+    "angular",
+    "ng"
+  ],
+  "license": "SEE LICENSE IN license",
+  "main": "./dist/ej2-angular-base.umd.min.js",
+  "module": "./index.js",
+  "name": "@syncfusion/ej2-angular-base",
+  "peerDependencies": {
+    "@angular/common": "4.10.0 - 11.1.1",
+    "@angular/compiler": "4.10.0 - 11.1.1",
+    "@angular/core": "4.10.0 - 11.1.1",
+    "@angular/forms": "4.10.0 - 11.1.1",
+    "@angular/platform-browser": "4.10.0 - 11.1.1",
+    "@angular/platform-browser-dynamic": "4.10.0 - 11.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "scripts": {
+    "ci-publish": "gulp ci-publish",
+    "compile": "gulp ci-compile",
+    "postinstall": "node ./postinstall.js",
+    "test": "gulp build"
+  },
+  "typings": "index.d.ts",
+  "version": "19.8.0"
+}

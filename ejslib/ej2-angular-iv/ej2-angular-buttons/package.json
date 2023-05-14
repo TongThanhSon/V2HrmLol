@@ -1,0 +1,102 @@
+{
+  "_from": "@syncfusion/ej2-angular-buttons@*",
+  "_id": "@syncfusion/ej2-angular-buttons@20.1.61",
+  "_inBundle": false,
+  "_integrity": "sha512-SWL5Mn3GqGLgjqkuyj34B3DDKYlA5k6lvf6KFW+1jywI4IGp/gXZI9877qJCcLo2C8u1fNwUgNKqvJaQMKf7iA==",
+  "_location": "/@syncfusion/ej2-angular-buttons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-buttons@*",
+    "name": "@syncfusion/ej2-angular-buttons",
+    "escapedName": "@syncfusion%2fej2-angular-buttons",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-buttons/-/ej2-angular-buttons-20.1.61.tgz",
+  "_shasum": "4763a9063d011c21e3afcef33e21fb0586ef3dac",
+  "_spec": "@syncfusion/ej2-angular-buttons@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-buttons": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "A package of feature-rich Essential JS 2 components such as Button, CheckBox, RadioButton and Switch. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-buttons.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-buttons.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-buttons.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-buttons.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-buttons.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-buttons.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-buttons.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-buttons.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-buttons.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-buttons.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "ej2-buttons",
+    "button",
+    "ej2 button",
+    "checkbox",
+    "ej2 checkbox",
+    "checkboxes",
+    "radio button",
+    "radiobutton",
+    "radiobuttons",
+    "ej2 radiobutton",
+    "switch",
+    "ej2 switch",
+    "primary button",
+    "flat button",
+    "round button",
+    "icon button",
+    "togglebutton",
+    "toggle button",
+    "form control",
+    "form controls",
+    "input",
+    "angular",
+    "ng",
+    "ej2-ng-buttons",
+    "ng-button",
+    "ng-checkbox",
+    "ng-radiobutton",
+    "ng-switch"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-buttons.mjs",
+  "name": "@syncfusion/ej2-angular-buttons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-buttons.d.ts",
+  "version": "20.1.61"
+}

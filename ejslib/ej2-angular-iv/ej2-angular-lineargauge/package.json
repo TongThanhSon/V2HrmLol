@@ -1,0 +1,88 @@
+{
+  "_from": "@syncfusion/ej2-angular-lineargauge@*",
+  "_id": "@syncfusion/ej2-angular-lineargauge@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-7dDjtL99HMWr43aZ/dUv288EjTG2BHv383HXIOuBHYfwTAmdpExpOffdxwaUx7sSx0eXBXRKXda4KjX8AmQb4w==",
+  "_location": "/@syncfusion/ej2-angular-lineargauge",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-lineargauge@*",
+    "name": "@syncfusion/ej2-angular-lineargauge",
+    "escapedName": "@syncfusion%2fej2-angular-lineargauge",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-lineargauge/-/ej2-angular-lineargauge-20.1.55.tgz",
+  "_shasum": "d66449cb4f634613ab1fc666e7f8dabe0643b31a",
+  "_spec": "@syncfusion/ej2-angular-lineargauge@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-lineargauge": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 LinearGauge Components for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-lineargauge.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-lineargauge.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-lineargauge.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-lineargauge.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-lineargauge.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-lineargauge.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-lineargauge.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-lineargauge.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-lineargauge.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-lineargauge.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "ej2-lineargauge",
+    "web-components",
+    "linear-gauge",
+    "annotation",
+    "scale",
+    "range",
+    "axis",
+    "pointer",
+    "tooltip",
+    "container",
+    "typescript",
+    "angular",
+    "ng-lineargauge",
+    "ej2-ng-lineargauge"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-lineargauge.mjs",
+  "name": "@syncfusion/ej2-angular-lineargauge",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-lineargauge.d.ts",
+  "version": "20.1.55"
+}

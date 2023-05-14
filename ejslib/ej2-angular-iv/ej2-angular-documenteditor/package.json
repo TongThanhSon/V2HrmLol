@@ -1,0 +1,85 @@
+{
+  "_from": "@syncfusion/ej2-angular-documenteditor@*",
+  "_id": "@syncfusion/ej2-angular-documenteditor@20.1.61",
+  "_inBundle": false,
+  "_integrity": "sha512-0Xim4Cf57FV0uCIoyeevBpTCh9iZzFiq7ytKiDOm/6r11p8bgTmc4p/pMHNILtbkYnuH529CLANcUyHZbdj8gw==",
+  "_location": "/@syncfusion/ej2-angular-documenteditor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-documenteditor@*",
+    "name": "@syncfusion/ej2-angular-documenteditor",
+    "escapedName": "@syncfusion%2fej2-angular-documenteditor",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-documenteditor/-/ej2-angular-documenteditor-20.1.61.tgz",
+  "_shasum": "b0f181fec95ce416e95b9dea6c7f299897b910ee",
+  "_spec": "@syncfusion/ej2-angular-documenteditor@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-documenteditor": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Feature-rich document editor control with built-in support for context menu, options pane and dialogs. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-documenteditor.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-documenteditor.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-documenteditor.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-documenteditor.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-documenteditor.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-documenteditor.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-documenteditor.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-documenteditor.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-documenteditor.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-documenteditor.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "web-components",
+    "syncfusion",
+    "Javascript",
+    "TypeScript",
+    "js",
+    "documenteditor",
+    "document-editor",
+    "word-editor",
+    "ej2-documenteditor-container",
+    "ej2-angular-documenteditor",
+    "angular-documenteditor",
+    "angular"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-documenteditor.mjs",
+  "name": "@syncfusion/ej2-angular-documenteditor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-documenteditor.d.ts",
+  "version": "20.1.61"
+}

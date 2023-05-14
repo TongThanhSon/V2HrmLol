@@ -1,0 +1,90 @@
+{
+  "_from": "@syncfusion/ej2-angular-dropdowns@*",
+  "_id": "@syncfusion/ej2-angular-dropdowns@20.1.60",
+  "_inBundle": false,
+  "_integrity": "sha512-FbV5yn/t1P8brc4cOUCmU1AyUfqVu3JbeFAmFpQzuN4ukAnEAkxgaw8oIS62unRqx6r55b+ei+wGly8wFdkTDQ==",
+  "_location": "/@syncfusion/ej2-angular-dropdowns",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-dropdowns@*",
+    "name": "@syncfusion/ej2-angular-dropdowns",
+    "escapedName": "@syncfusion%2fej2-angular-dropdowns",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-dropdowns/-/ej2-angular-dropdowns-20.1.60.tgz",
+  "_shasum": "be2d0706cd1bf5321f195c9e29d6f0e71717a007",
+  "_spec": "@syncfusion/ej2-angular-dropdowns@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-dropdowns": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 DropDown Components for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-dropdowns.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-dropdowns.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-dropdowns.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-dropdowns.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-dropdowns.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-dropdowns.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-dropdowns.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-dropdowns.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-dropdowns.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-dropdowns.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "Syncfusion",
+    "web-components",
+    "dropdownlist",
+    "autocomplete",
+    "multiselect",
+    "combobox",
+    "select",
+    "dropdwontree",
+    "angular",
+    "ng",
+    "ng-dropdown",
+    "ej2-ng-dropdown",
+    "ng-dropdownlist",
+    "ng-autocomplete",
+    "ng-multiselect",
+    "ng-combobox",
+    "ng-dropdowntree"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-dropdowns.mjs",
+  "name": "@syncfusion/ej2-angular-dropdowns",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-dropdowns.d.ts",
+  "version": "20.1.60"
+}

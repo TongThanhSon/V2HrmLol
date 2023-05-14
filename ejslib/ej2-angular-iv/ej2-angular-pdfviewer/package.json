@@ -1,0 +1,82 @@
+{
+  "_from": "@syncfusion/ej2-angular-pdfviewer@*",
+  "_id": "@syncfusion/ej2-angular-pdfviewer@20.1.61",
+  "_inBundle": false,
+  "_integrity": "sha512-fotGcFV1Y5gKc5ffqa6m+9M/W0+FrH3AJJhLdDYC2SkJsV7Bk8Vibq8tGRMdq+yfKGGr58pDLrH3SJ+Nn3Nq3w==",
+  "_location": "/@syncfusion/ej2-angular-pdfviewer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-pdfviewer@*",
+    "name": "@syncfusion/ej2-angular-pdfviewer",
+    "escapedName": "@syncfusion%2fej2-angular-pdfviewer",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-pdfviewer/-/ej2-angular-pdfviewer-20.1.61.tgz",
+  "_shasum": "41915c3d3dc619c73eb0f3656c39e8e329c87d84",
+  "_spec": "@syncfusion/ej2-angular-pdfviewer@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-pdfviewer": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 PDF viewer Component for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-pdfviewer.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-pdfviewer.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-pdfviewer.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-pdfviewer.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-pdfviewer.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-pdfviewer.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-pdfviewer.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-pdfviewer.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-pdfviewer.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-pdfviewer.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "ej2-pdfviewer",
+    "syncfusion",
+    "web-components",
+    "viewer",
+    "pdf",
+    "typescript",
+    "angular",
+    "ng-pdfviewer",
+    "ej2-ng-pdfviewer"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-pdfviewer.mjs",
+  "name": "@syncfusion/ej2-angular-pdfviewer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-pdfviewer.d.ts",
+  "version": "20.1.61"
+}

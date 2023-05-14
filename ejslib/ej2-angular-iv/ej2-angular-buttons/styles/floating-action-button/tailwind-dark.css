@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.e-fab {
+  border-radius: 9999px;
+  min-height: 40px;
+  min-width: 40px;
+  position: absolute;
+  z-index: 100000;
+}
+.e-fab.e-fab-fixed {
+  position: fixed;
+}
+.e-fab.e-fab-top {
+  top: 10px;
+}
+.e-fab.e-fab-top.e-fab-middle {
+  top: var(--fabVertDist);
+}
+.e-fab.e-fab-bottom {
+  bottom: 10px;
+}
+.e-fab.e-fab-bottom.e-fab-middle {
+  bottom: var(--fabVertDist);
+}
+.e-fab.e-fab-left {
+  left: 10px;
+}
+.e-fab.e-fab-left.e-fab-center {
+  left: var(--fabHorzDist);
+}
+.e-fab.e-fab-right {
+  right: 10px;
+}
+.e-fab.e-fab-right.e-fab-center {
+  right: var(--fabHorzDist);
+}
+
+.e-fab-hidden {
+  visibility: hidden;
+}
+
+/* stylelint-disable-line no-empty-source */

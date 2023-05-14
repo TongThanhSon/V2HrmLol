@@ -1,0 +1,101 @@
+{
+  "_from": "@syncfusion/ej2-angular-notifications@*",
+  "_id": "@syncfusion/ej2-angular-notifications@20.1.61",
+  "_inBundle": false,
+  "_integrity": "sha512-m6kn/xrtqLX26aC7QpcQjFdQDnTRPQ7KV/oR1OP7v8adYr44PEnHodfxLBAVwoUnl0MUvvT0BRiU2HfoYhYzaQ==",
+  "_location": "/@syncfusion/ej2-angular-notifications",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-notifications@*",
+    "name": "@syncfusion/ej2-angular-notifications",
+    "escapedName": "@syncfusion%2fej2-angular-notifications",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-notifications/-/ej2-angular-notifications-20.1.61.tgz",
+  "_shasum": "4041b0ecb3f9afde13170bc56bafe4d18f6d01df",
+  "_spec": "@syncfusion/ej2-angular-notifications@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-notifications": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "A package of Essential JS 2 notification components such as Toast and Badge which used to notify important information to end-users. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-notifications.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-notifications.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-notifications.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-notifications.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-notifications.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-notifications.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-notifications.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-notifications.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-notifications.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-notifications.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "javascript",
+    "typescript",
+    "ej2-notification-components",
+    "ej2-badge",
+    "badges",
+    "ej2-toast",
+    "toast",
+    "toaster",
+    "notification",
+    "notification badge",
+    "circle badge",
+    "badge css",
+    "toast css",
+    "alart",
+    "angular",
+    "ng",
+    "ng-template",
+    "ej2-ng-notifications",
+    "ng-notifications",
+    "ng-toast",
+    "angular-toaster",
+    "angular-template",
+    "ej2-angular-notifications",
+    "angular-notifications",
+    "angular-toast",
+    "angular-toaster"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-notifications.mjs",
+  "name": "@syncfusion/ej2-angular-notifications",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-notifications.d.ts",
+  "version": "20.1.61"
+}

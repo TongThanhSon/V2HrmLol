@@ -35,6 +35,8 @@ using Microsoft.Extensions.Options;
 using HRProcessDAL;
 using HRProcessDAL.Repositories;
 using HRProcessDAL.EntityFrameworkCore;
+using Common.DAO;
+using Common.DataContractCore.Base;
 
 namespace API
 {
@@ -224,6 +226,8 @@ namespace API
             services.AddTransient<IAttendanceBusiness, AttendanceBusiness>();
             services.AddTransient<IPayrollBusiness, PayrollBusiness>();
             services.AddTransient<IRefreshTokenService, RefreshTokenService>();
+            services.AddTransient <IDBManager<DBAction.System>, MsSqlDBManager<DBAction.System>>();
+
 
             //------ Environment Development ----------
             services.AddTransient<IDatabaseInitializer, DatabaseInitializer>();

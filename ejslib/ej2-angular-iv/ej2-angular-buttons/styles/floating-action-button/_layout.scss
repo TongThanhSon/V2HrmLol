@@ -1,0 +1,48 @@
+@include export-module('floating-action-button-layout') {
+  .e-fab {
+    border-radius: $fab-border-radius;
+    min-height: $fab-min-height;
+    min-width: $fab-min-width;
+    position: absolute;
+    z-index: 100000;
+
+    &.e-fab-fixed {
+      position: fixed;
+    }
+
+    &.e-fab-top {
+      top: $fab-offset;
+      
+      &.e-fab-middle {
+        top: var(--fabVertDist);
+      }
+    }
+
+    &.e-fab-bottom {
+      bottom: $fab-offset;
+
+      &.e-fab-middle {
+        bottom: var(--fabVertDist);
+      }
+    }
+
+    &.e-fab-left {
+      left: $fab-offset;
+      &.e-fab-center {
+        left: var(--fabHorzDist);
+      }
+    }
+
+    &.e-fab-right {
+      right: $fab-offset;
+
+      &.e-fab-center {
+        right: var(--fabHorzDist);
+      }
+    }
+  }
+
+  .e-fab-hidden {
+    visibility: hidden;
+  }
+}

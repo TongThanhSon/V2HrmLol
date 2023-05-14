@@ -1,0 +1,823 @@
+import { keyDown, cellNavigate, renameSheet, filterCellKeyDown, getUpdateUsingRaf, isLockedCells, focus, dialog } from '../common/index';
+import { getCellIndexes, getRangeAddress, getRowHeight, getColumnWidth, getCell, isHiddenCol, getRowsHeight, getColumnsWidth, getColumnHeaderText } from '../../workbook/index';
+import { getRangeIndexes, getSwapRange, isHiddenRow, isColumnSelected, isRowSelected, skipHiddenIdx } from '../../workbook/index';
+import { closest, isNullOrUndefined, isUndefined } from '@syncfusion/ej2-base';
+/**
+ * Represents keyboard navigation support for Spreadsheet.
+ */
+var KeyboardNavigation = /** @class */ (function () {
+    /**
+     * Constructor for the Spreadsheet Keyboard Navigation module.
+     *
+     * @private
+     * @param {Spreadsheet} parent - Specify the spreadsheet
+     */
+    function KeyboardNavigation(parent) {
+        this.parent = parent;
+        this.addEventListener();
+        /* code snippet */
+    }
+    KeyboardNavigation.prototype.addEventListener = function () {
+        this.parent.on(keyDown, this.keyDownHandler, this);
+        /* code snippet */
+    };
+    KeyboardNavigation.prototype.removeEventListener = function () {
+        if (!this.parent.isDestroyed) {
+            this.parent.off(keyDown, this.keyDownHandler);
+        }
+        /* code snippet */
+    };
+    KeyboardNavigation.prototype.keyDownHandler = function (e) {
+        var _this = this;
+        var target = e.target;
+        if (this.parent.isEdit || this.parent.serviceLocator.getService(dialog).dialogInstance ||
+            target.id === this.parent.element.id + "_name_box" || (target.classList.contains('e-ddl') &&
+            target.classList.contains('e-input-focus'))) {
+            return;
+        }
+        if (e.altKey && e.keyCode === 38 && this.parent.element.lastElementChild.classList.contains('e-filter-popup')) {
+            this.parent.notify(filterCellKeyDown, { closePopup: true });
+            return;
+        }
+        if (e.altKey && e.keyCode === 40 && (closest(target, '.e-dropdown-btn') || closest(target, '.e-split-btn'))) {
+            return;
+        }
+        if (target.classList.contains('e-sheet-rename')) {
+            if (e.keyCode === 32) {
+                e.stopPropagation();
+            }
+            else if (e.keyCode === 13 || e.keyCode === 27) {
+                this.parent.notify(renameSheet, e);
+            }
+            return;
+        }
+        else if (target.id === this.parent.element.id + "_File") {
+            focus(this.parent.element);
+        }
+        var isNavigate;
+        var scrollIdxes;
+        var scrollToCell;
+        var isRtl = this.parent.enableRtl;
+        var sheet = this.parent.getActiveSheet();
+        var selectIdx = getRangeIndexes(sheet.selectedRange);
+        var actIdxes = getCellIndexes(sheet.activeCell);
+        var mainPanel = this.parent.element.querySelector('.e-main-panel');
+        var hCont = this.parent.getScrollElement();
+        if ([9, 37, 38, 39, 40, 33, 34].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+        if (e.keyCode === 36) {
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey) { /*ctrl+shift+home*/
+                e.preventDefault();
+                this.parent.selectRange(getColumnHeaderText(actIdxes[1] + 1) + (actIdxes[0] + 1) + ':A1');
+                if (mainPanel.scrollTop) {
+                    mainPanel.scrollTop = 0;
+                }
+                if (hCont.scrollLeft) {
+                    hCont.scrollLeft = 0;
+                }
+            }
+            else if (actIdxes[1] >= 0) {
+                if (e.ctrlKey) { /*ctrl+home*/
+                    actIdxes[0] = 0;
+                    actIdxes[1] = 0;
+                }
+                else { /*home*/
+                    e.preventDefault();
+                    actIdxes[1] = 0;
+                }
+                isNavigate = true;
+            }
+        }
+        if ((e.ctrlKey || e.metaKey) && e.keyCode === 35) { /*ctrl + end*/
+            e.preventDefault();
+            actIdxes[0] = sheet.usedRange.rowIndex;
+            actIdxes[1] = sheet.usedRange.colIndex;
+            scrollToCell = isNavigate = true;
+        }
+        if (e.shiftKey && e.keyCode === 32) { /*shift + space*/
+            e.preventDefault();
+            selectIdx[1] = 0;
+            this.parent.selectRange(getRangeAddress([selectIdx[0], selectIdx[1], selectIdx[2], (selectIdx[3] + sheet.colCount)]));
+        }
+        if ((e.ctrlKey || e.metaKey) && e.keyCode === 32) { /*ctrl+ space*/
+            selectIdx[0] = 0;
+            this.parent.selectRange(getRangeAddress([selectIdx[0], selectIdx[1], (selectIdx[2] + sheet.rowCount), selectIdx[3]]));
+        }
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
+            var actCell = getRangeIndexes(sheet.selectedRange);
+            if (e.keyCode === 40) { /*ctrl+shift+down*/
+                var nextCell = this.getNextNonEmptyCell(actCell[2], actCell[3], 'down');
+                actCell[2] = nextCell[0];
+                actCell[3] = nextCell[1];
+                this.parent.selectRange(getRangeAddress(actCell));
+                this.scrollNavigation(nextCell, null, true);
+            }
+            else if (e.keyCode === 39) { /*ctrl+shift+right*/
+                var nextCell = this.getNextNonEmptyCell(actCell[2], actCell[3], 'right');
+                actCell[2] = nextCell[0];
+                actCell[3] = nextCell[1];
+                this.parent.selectRange(getRangeAddress(actCell));
+                this.scrollNavigation(nextCell, null, true);
+            }
+            else if (e.keyCode === 38) { /*ctrl+shift+up*/
+                var nextCell = this.getNextNonEmptyCell(actCell[2], actCell[3], 'top');
+                actCell[2] = nextCell[0] - 1;
+                actCell[3] = nextCell[1];
+                if (actCell[2] === -1) {
+                    actCell[2] = 0;
+                }
+                this.parent.selectRange(getRangeAddress(actCell));
+                this.scrollNavigation(nextCell, null, true);
+            }
+            else if (e.keyCode === 37) { /*ctrl+shift+left*/
+                var nextCell = this.getNextNonEmptyCell(actCell[2], actCell[3], 'left');
+                actCell[2] = nextCell[0];
+                actCell[3] = nextCell[1] - 1;
+                if (actCell[3] === -1) {
+                    actCell[3] = 0;
+                }
+                this.parent.selectRange(getRangeAddress(actCell));
+                this.scrollNavigation(nextCell, null, true);
+            }
+        }
+        if ((e.ctrlKey || e.metaKey) && !e.shiftKey) {
+            if (e.keyCode === 37) { /*ctrl + left*/
+                actIdxes[1] = this.getNextNonEmptyCell(actIdxes[0], actIdxes[1], 'left')[1];
+                isNavigate = scrollToCell = true;
+            }
+            else if (e.keyCode === 38) { /*ctrl + up*/
+                actIdxes[0] = this.getNextNonEmptyCell(actIdxes[0], actIdxes[1], 'top')[0];
+                isNavigate = scrollToCell = true;
+            }
+            else if (e.keyCode === 39) { /*ctrl+ right*/
+                actIdxes[1] = this.getNextNonEmptyCell(actIdxes[0], actIdxes[1], 'right')[1];
+                isNavigate = scrollToCell = true;
+            }
+            else if (e.keyCode === 40) { /*ctrl+ down*/
+                actIdxes[0] = this.getNextNonEmptyCell(actIdxes[0], actIdxes[1], 'down')[0];
+                isNavigate = scrollToCell = true;
+            }
+        }
+        if (e.shiftKey && (e.keyCode === 34 || e.keyCode === 33)) { /* shift Page Up and Page Down*/
+            var diff = 0;
+            if (e.keyCode === 34) { /* Page Down*/
+                diff = mainPanel.getBoundingClientRect().height + mainPanel.scrollTop;
+            }
+            else { /* Page up*/
+                diff = mainPanel.scrollTop - mainPanel.getBoundingClientRect().height;
+                if (diff < 0) {
+                    return;
+                }
+            }
+            var aRowIdx = getRangeIndexes(this.parent.getActiveSheet().selectedRange)[2];
+            var topRow_1 = getCellIndexes(this.parent.getActiveSheet().paneTopLeftCell)[0];
+            var selectDiff_1 = aRowIdx - topRow_1;
+            if (this.parent.scrollModule) {
+                this.parent.scrollModule.isKeyScroll = false;
+            }
+            mainPanel.scrollTop = diff;
+            getUpdateUsingRaf(function () {
+                topRow_1 = getCellIndexes(_this.parent.getActiveSheet().paneTopLeftCell)[0];
+                var actIdx = topRow_1 + selectDiff_1;
+                _this.parent.selectRange(getRangeAddress([actIdxes[0], actIdxes[1], topRow_1 + selectDiff_1, actIdxes[1]]));
+            });
+        }
+        var filterArgs = { e: e, isFilterCell: false };
+        if (e.shiftKey && !e.ctrlKey) { /* shift selection */
+            this.shiftSelection(e);
+        }
+        else if (e.altKey && e.keyCode === 40) {
+            this.parent.notify(filterCellKeyDown, filterArgs);
+        }
+        if (!e.shiftKey && ((!isRtl && e.keyCode === 37) || (isRtl && e.keyCode === 39)) || (e.shiftKey && e.keyCode === 9)) {
+            /*left key*/
+            if (actIdxes[1] > 0) {
+                if (sheet.isProtected && !sheet.protectSettings.selectUnLockedCells || !sheet.isProtected) {
+                    actIdxes[1] -= 1;
+                }
+                else {
+                    var idx = this.getNextUnlockedCell(e.keyCode, actIdxes);
+                    actIdxes[1] = idx[1];
+                    actIdxes[0] = idx[0];
+                }
+                isNavigate = true;
+            }
+            else {
+                var content = this.parent.getMainContent();
+                if (actIdxes[1] === 0 && content.scrollLeft && !isRtl) {
+                    content.scrollLeft = 0;
+                }
+            }
+        }
+        else if (e.shiftKey && e.keyCode === 13) {
+            if (!this.parent.element.querySelector('.e-find-toolbar')) {
+                if (actIdxes[0] > 0) {
+                    if (sheet.isProtected && !sheet.protectSettings.selectUnLockedCells || !sheet.isProtected) {
+                        actIdxes[0] -= 1;
+                    }
+                    else {
+                        var idx = this.getNextUnlockedCell(e.keyCode, actIdxes);
+                        actIdxes[1] = idx[1];
+                        actIdxes[0] = idx[0];
+                    }
+                    isNavigate = true;
+                }
+                else {
+                    var content = this.parent.getMainContent().parentElement;
+                    if (actIdxes[0] === 0 && content.scrollTop) {
+                        content.scrollTop = 0;
+                    }
+                }
+            }
+        }
+        else if (!filterArgs.isFilterCell && !e.shiftKey && e.keyCode === 38) { /*Up key*/
+            if (actIdxes[0] > 0) {
+                if (sheet.isProtected && !sheet.protectSettings.selectUnLockedCells || !sheet.isProtected) {
+                    actIdxes[0] -= 1;
+                }
+                else {
+                    var cellIdx = this.getNextUnlockedCell(e.keyCode, actIdxes);
+                    actIdxes[1] = cellIdx[1];
+                    actIdxes[0] = cellIdx[0];
+                }
+                isNavigate = true;
+            }
+            else {
+                var contentEle = this.parent.getMainContent().parentElement;
+                if (actIdxes[0] === 0 && contentEle.scrollTop) {
+                    contentEle.scrollTop = 0;
+                }
+            }
+        }
+        else if (!e.shiftKey && !e.ctrlKey && ((!isRtl && e.keyCode === 39) || (isRtl && e.keyCode === 37)) || e.keyCode === 9) { /*Right key*/
+            var cell = getCell(actIdxes[0], actIdxes[1], sheet);
+            if (cell && cell.colSpan > 1) {
+                actIdxes[1] += (cell.colSpan - 1);
+            }
+            if (actIdxes[1] < sheet.colCount - 1) {
+                if (sheet.isProtected && !sheet.protectSettings.selectUnLockedCells || !sheet.isProtected) {
+                    actIdxes[1] += 1;
+                }
+                else {
+                    var idx = this.getNextUnlockedCell(e.keyCode, actIdxes);
+                    actIdxes[1] = idx[1];
+                    actIdxes[0] = idx[0];
+                }
+                isNavigate = true;
+            }
+        }
+        else if ((!filterArgs.isFilterCell && !e.shiftKey && !e.ctrlKey && e.keyCode === 40) || e.keyCode === 13) { /*Down Key*/
+            var cell = getCell(actIdxes[0], actIdxes[1], sheet);
+            if (cell && cell.rowSpan > 1) {
+                actIdxes[0] += (cell.rowSpan - 1);
+            }
+            if (actIdxes[0] < sheet.rowCount - 1) {
+                if (sheet.isProtected && !sheet.protectSettings.selectUnLockedCells || !sheet.isProtected) {
+                    actIdxes[0] += 1;
+                }
+                else {
+                    var idx = this.getNextUnlockedCell(e.keyCode, actIdxes);
+                    actIdxes[1] = idx[1];
+                    actIdxes[0] = idx[0];
+                }
+                isNavigate = true;
+            }
+        }
+        else if (!e.shiftKey && (e.keyCode === 34 || e.keyCode === 33) && (!this.parent.scrollModule ||
+            this.parent.scrollModule.isKeyScroll)) { /*Page Up and Page Down*/
+            var mainPanel_1 = this.parent.element.querySelector('.e-main-panel');
+            var diff = 0;
+            if (e.keyCode === 34) { /*Page Down*/
+                diff = mainPanel_1.getBoundingClientRect().height + mainPanel_1.scrollTop;
+            }
+            else { /*Page Up*/
+                diff = mainPanel_1.scrollTop - mainPanel_1.getBoundingClientRect().height;
+                if (diff < 0) {
+                    return;
+                }
+            }
+            var aRowIdx = getCellIndexes(this.parent.getActiveSheet().activeCell)[0];
+            var topRow_2 = getCellIndexes(this.parent.getActiveSheet().paneTopLeftCell)[0];
+            var selectDiff_2 = aRowIdx - topRow_2;
+            if (this.parent.scrollModule) {
+                this.parent.scrollModule.isKeyScroll = false;
+            }
+            mainPanel_1.scrollTop = diff;
+            getUpdateUsingRaf(function () {
+                topRow_2 = getCellIndexes(_this.parent.getActiveSheet().paneTopLeftCell)[0];
+                _this.parent.notify(cellNavigate, { range: [topRow_2 + selectDiff_2, actIdxes[1]], preventAnimation: true });
+            });
+        }
+        if ((isNavigate && (!this.parent.scrollModule || this.parent.scrollModule.isKeyScroll)) && !closest(document.activeElement, '.e-ribbon')) {
+            if (e.keyCode === 40 || e.keyCode === 38 || e.keyCode === 13) { /* down || up */
+                while (isHiddenRow(sheet, actIdxes[0])) {
+                    if (e.keyCode === 40 || (!e.shiftKey && e.keyCode === 13)) {
+                        actIdxes[0] = actIdxes[0] + 1;
+                    }
+                    if (e.keyCode === 38 || (e.shiftKey && e.keyCode === 13)) {
+                        actIdxes[0] = actIdxes[0] - 1;
+                        if (actIdxes[0] < 0) {
+                            return;
+                        }
+                    }
+                }
+            }
+            if (e.keyCode === 37 || e.keyCode === 39 || e.keyCode === 9) { /* left || right || tab */
+                while (isHiddenCol(sheet, actIdxes[1])) {
+                    if (e.keyCode === 39 || (!e.shiftKey && e.keyCode === 9)) {
+                        actIdxes[1] = actIdxes[1] + 1;
+                    }
+                    if (e.keyCode === 37 || (e.shiftKey && e.keyCode === 9)) {
+                        actIdxes[1] = actIdxes[1] - 1;
+                        if (actIdxes[1] < 0) {
+                            return;
+                        }
+                    }
+                }
+            }
+            this.scrollNavigation(scrollIdxes || actIdxes, scrollIdxes ? true : false, scrollToCell);
+            var range_1 = getRangeAddress(actIdxes);
+            var navigateFn = function (preventAnimation) {
+                if (range_1 === sheet.selectedRange) {
+                    return;
+                }
+                _this.parent.setSheetPropertyOnMute(sheet, 'activeCell', range_1);
+                _this.parent.notify(cellNavigate, { range: actIdxes, preventAnimation: preventAnimation });
+                var cell = _this.parent.getCell(actIdxes[0], actIdxes[1]);
+                if (cell) {
+                    focus(cell);
+                }
+            };
+            if (this.parent.scrollModule && this.parent.scrollModule.isKeyScroll) {
+                if (range_1 === sheet.selectedRange) {
+                    return;
+                }
+                getUpdateUsingRaf(navigateFn.bind(this, true));
+            }
+            else {
+                navigateFn();
+            }
+        }
+    };
+    KeyboardNavigation.prototype.getNextNonEmptyCell = function (rowIdx, colIdx, position) {
+        var indexes = [rowIdx, colIdx];
+        var sheet = this.parent.getActiveSheet();
+        var checkForEmptyCell;
+        if (position === "down") {
+            checkForEmptyCell = !isUndefined(getCell(rowIdx, colIdx, sheet, null, true).value) && !isUndefined(getCell(rowIdx + 1, colIdx, sheet, null, true).value);
+            for (var i = rowIdx; i < sheet.rowCount; i++) {
+                if (checkForEmptyCell) {
+                    if (isUndefined(getCell(i, colIdx, sheet, null, true).value)) {
+                        return [i - 1, colIdx];
+                    }
+                }
+                else {
+                    if (!isUndefined(getCell(i + 1, colIdx, sheet, null, true).value)) {
+                        return [i + 1, colIdx];
+                    }
+                }
+                if (i === sheet.rowCount - 1) {
+                    return [i, colIdx];
+                }
+            }
+        }
+        if (position === "top") {
+            checkForEmptyCell = !isUndefined(getCell(rowIdx, colIdx, sheet, null, true).value) && !isUndefined(getCell(rowIdx - 1, colIdx, sheet, null, true).value);
+            for (var i = rowIdx; i >= 0; i--) {
+                if (checkForEmptyCell) {
+                    if (isUndefined(getCell(i, colIdx, sheet, null, true).value)) {
+                        return [i - 1, colIdx];
+                    }
+                }
+                else {
+                    if (!isUndefined(getCell(i - 1, colIdx, sheet, null, true).value)) {
+                        return [i, colIdx];
+                    }
+                }
+                if (i === 0) {
+                    return [i, colIdx];
+                }
+            }
+        }
+        if (position === "right") {
+            checkForEmptyCell = !isUndefined(getCell(rowIdx, colIdx, sheet, null, true).value) && !isUndefined(getCell(rowIdx, colIdx + 1, sheet, null, true).value);
+            for (var i = colIdx; i < sheet.colCount; i++) {
+                if (checkForEmptyCell) {
+                    if (isUndefined(getCell(rowIdx, i, sheet, null, true).value)) {
+                        return [rowIdx, i - 1];
+                    }
+                }
+                else {
+                    if (!isUndefined(getCell(rowIdx, i + 1, sheet, null, true).value)) {
+                        return [rowIdx, i + 1];
+                    }
+                }
+                if (i === sheet.colCount - 1) {
+                    return [rowIdx, i];
+                }
+            }
+        }
+        if (position === "left") {
+            checkForEmptyCell = !isUndefined(getCell(rowIdx, colIdx, sheet, null, true).value) && !isUndefined(getCell(rowIdx, colIdx - 1, sheet, null, true).value);
+            for (var i = colIdx; i >= 0; i--) {
+                if (checkForEmptyCell) {
+                    if (isUndefined(getCell(rowIdx, i, sheet, null, true).value)) {
+                        return [rowIdx, i - 1];
+                    }
+                }
+                else {
+                    if (!isUndefined(getCell(rowIdx, i - 1, sheet, null, true).value)) {
+                        return [rowIdx, i];
+                    }
+                }
+                if (i === 0) {
+                    return [rowIdx, i];
+                }
+            }
+        }
+        return indexes;
+    };
+    KeyboardNavigation.prototype.getNextUnlockedCell = function (keycode, actCellIdx) {
+        var sheet = this.parent.getActiveSheet();
+        var index;
+        if (keycode === 39) {
+            var colIdx = actCellIdx[1] + 1;
+            var rowIdx = actCellIdx[0];
+            if (actCellIdx[1] === sheet.usedRange.colIndex) {
+                colIdx = 0;
+                rowIdx = rowIdx + 1;
+                if (actCellIdx[0] === sheet.usedRange.rowIndex) {
+                    rowIdx = 0;
+                }
+            }
+            if (actCellIdx[1] === sheet.usedRange.colIndex && actCellIdx[0] === sheet.usedRange.rowIndex) {
+                rowIdx = colIdx = 0;
+            }
+            for (var i = rowIdx; i <= sheet.usedRange.rowIndex + 1; i++) {
+                if (i > sheet.usedRange.rowIndex) {
+                    i = 0;
+                }
+                for (var j = colIdx; j <= sheet.usedRange.colIndex; j++) {
+                    if (!isLockedCells(this.parent, [i, j, i, j])) {
+                        index = [i, j];
+                        return index;
+                    }
+                    colIdx = j;
+                }
+                rowIdx = i;
+                if (colIdx === sheet.usedRange.colIndex) {
+                    colIdx = 0;
+                    if (rowIdx === sheet.usedRange.rowIndex) {
+                        rowIdx = 0;
+                    }
+                    else {
+                        rowIdx++;
+                    }
+                }
+            }
+        }
+        if (keycode === 37) { /*Right Key*/
+            var colIdx = actCellIdx[1] - 1;
+            var rowIdx = actCellIdx[0];
+            if (actCellIdx[1] === 0) {
+                colIdx = sheet.usedRange.colIndex;
+                rowIdx = rowIdx - 1;
+                if (actCellIdx[0] === 0) {
+                    rowIdx = sheet.usedRange.rowIndex;
+                }
+            }
+            for (var i = rowIdx; i >= -1; i--) {
+                if (i < 0) {
+                    i = sheet.usedRange.rowIndex;
+                }
+                for (var j = colIdx; j >= 0; j--) {
+                    if (!isLockedCells(this.parent, [i, j, i, j])) {
+                        index = [i, j];
+                        return index;
+                    }
+                    colIdx = j;
+                }
+                rowIdx = i;
+                if (colIdx === 0) {
+                    colIdx = sheet.usedRange.colIndex;
+                    if (rowIdx === 0) {
+                        rowIdx = sheet.usedRange.rowIndex;
+                    }
+                    else {
+                        rowIdx--;
+                    }
+                }
+            }
+        }
+        if (keycode === 40) { /*Down Key*/
+            var colIdx = actCellIdx[1];
+            var rowIdx = actCellIdx[0] + 1;
+            if (actCellIdx[0] === sheet.usedRange.rowIndex) {
+                colIdx = colIdx + 1;
+                rowIdx = 0;
+                if (actCellIdx[1] === sheet.usedRange.colIndex) {
+                    rowIdx = 0;
+                }
+            }
+            if (actCellIdx[1] === sheet.usedRange.colIndex && actCellIdx[0] === sheet.usedRange.rowIndex) {
+                rowIdx = colIdx = 0;
+            }
+            for (var i = colIdx; i <= sheet.usedRange.colIndex + 1; i++) {
+                if (i > sheet.usedRange.colIndex) {
+                    i = 0;
+                }
+                for (var j = rowIdx; j <= sheet.usedRange.rowIndex; j++) {
+                    if (!isLockedCells(this.parent, [j, i, j, i])) {
+                        index = [j, i];
+                        return index;
+                    }
+                    rowIdx = j;
+                }
+                colIdx = i;
+                if (rowIdx === sheet.usedRange.rowIndex) {
+                    colIdx++;
+                    if (colIdx === sheet.usedRange.colIndex) {
+                        rowIdx = 0;
+                    }
+                    else {
+                        rowIdx = 0;
+                    }
+                }
+            }
+        }
+        if (keycode === 38) { /*Up Key*/
+            var colIdx = actCellIdx[1];
+            var rowIdx = actCellIdx[0] - 1;
+            if (actCellIdx[0] === 0) {
+                colIdx = colIdx - 1;
+                rowIdx = sheet.usedRange.rowIndex;
+                if (actCellIdx[1] === 0) {
+                    colIdx = sheet.usedRange.colIndex;
+                }
+            }
+            for (var i = colIdx; i >= -1; i--) {
+                if (i < 0) {
+                    i = sheet.usedRange.colIndex;
+                }
+                for (var j = rowIdx; j >= 0; j--) {
+                    if (!isLockedCells(this.parent, [j, i, j, i])) {
+                        index = [j, i];
+                        return index;
+                    }
+                    rowIdx = j;
+                }
+                colIdx = i;
+                if (rowIdx === 0) {
+                    rowIdx = sheet.usedRange.rowIndex;
+                    if (colIdx === 0) {
+                        colIdx = sheet.usedRange.colIndex;
+                    }
+                    else {
+                        colIdx--;
+                    }
+                }
+            }
+        }
+        return index;
+    };
+    KeyboardNavigation.prototype.shiftSelection = function (e) {
+        var sheet = this.parent.getActiveSheet();
+        var selectedRange = getRangeIndexes(sheet.selectedRange);
+        var swapRange = getSwapRange(selectedRange);
+        var noHidden = true;
+        if (e.keyCode === 38) { /*shift + up arrow*/
+            for (var i = swapRange[1]; i <= swapRange[3]; i++) {
+                var cell = getCell(selectedRange[2], i, this.parent.getActiveSheet());
+                if (!isNullOrUndefined(cell) && cell.rowSpan && cell.rowSpan < 0) {
+                    selectedRange[2] = selectedRange[2] - (Math.abs(cell.rowSpan) + 1);
+                    noHidden = false;
+                    break;
+                }
+            }
+            if (noHidden) {
+                selectedRange[2] = selectedRange[2] - 1;
+            }
+            if (selectedRange[2] < 0) {
+                selectedRange[2] = 0;
+            }
+        }
+        if (e.keyCode === 40) { /*shift + down arrow*/
+            for (var i = swapRange[1]; i <= swapRange[3]; i++) {
+                var cell = getCell(selectedRange[2], i, this.parent.getActiveSheet());
+                if (!isNullOrUndefined(cell) && cell.rowSpan && cell.rowSpan > 0) {
+                    selectedRange[2] = selectedRange[2] + Math.abs(cell.rowSpan);
+                    noHidden = false;
+                    break;
+                }
+            }
+            if (noHidden) {
+                selectedRange[2] = selectedRange[2] + 1;
+            }
+            if (sheet.rowCount <= selectedRange[2]) {
+                selectedRange[2] = sheet.rowCount - 1;
+            }
+        }
+        if (e.keyCode === 39) { /*shift + right arrow*/
+            for (var i = swapRange[0]; i <= swapRange[2]; i++) {
+                var cell = getCell(i, selectedRange[3], this.parent.getActiveSheet());
+                if (!isNullOrUndefined(cell) && cell.colSpan && cell.colSpan > 0) {
+                    selectedRange[3] = selectedRange[3] + Math.abs(cell.colSpan);
+                    noHidden = false;
+                    break;
+                }
+            }
+            if (noHidden) {
+                selectedRange[3] = selectedRange[3] + 1;
+            }
+            if (sheet.colCount <= selectedRange[3]) {
+                selectedRange[3] = sheet.colCount - 1;
+            }
+        }
+        if (e.keyCode === 37) { /*shift + left arrow*/
+            for (var i = swapRange[0]; i <= swapRange[2]; i++) {
+                var cell = getCell(i, selectedRange[3], this.parent.getActiveSheet());
+                if (!isNullOrUndefined(cell) && cell.colSpan && cell.colSpan < 0) {
+                    selectedRange[3] = selectedRange[3] - (Math.abs(cell.colSpan) + 1);
+                    noHidden = false;
+                    break;
+                }
+            }
+            if (noHidden) {
+                selectedRange[3] = selectedRange[3] - 1;
+            }
+            if (selectedRange[3] < 0) {
+                selectedRange[3] = 0;
+            }
+        }
+        if (e.shiftKey && e.ctrlKey && !this.parent.scrollSettings.enableVirtualization) { /*ctrl + shift selection*/
+            var usedRange = [sheet.usedRange.rowIndex, sheet.usedRange.colIndex];
+            if (e.keyCode === 37) {
+                if (selectedRange[3] <= usedRange[1]) {
+                    selectedRange[3] = 0;
+                }
+                else {
+                    selectedRange[3] = usedRange[1];
+                }
+            }
+            if (e.keyCode === 38) {
+                if (selectedRange[2] <= usedRange[0]) {
+                    selectedRange[2] = 0;
+                }
+                else {
+                    selectedRange[2] = usedRange[0];
+                }
+            }
+            if (e.keyCode === 39) {
+                if (selectedRange[3] <= usedRange[1]) {
+                    selectedRange[3] = usedRange[1];
+                }
+                else {
+                    selectedRange[3] = this.parent.getActiveSheet().colCount;
+                }
+            }
+            if (e.keyCode === 40) {
+                if (selectedRange[2] <= usedRange[0]) {
+                    selectedRange[2] = usedRange[0];
+                }
+                else {
+                    selectedRange[2] = this.parent.getActiveSheet().rowCount;
+                }
+            }
+        }
+        if (e.keyCode === 37 || e.keyCode === 39 || e.keyCode === 38 || e.keyCode === 40) { /*left,right,up,down*/
+            var activeIdxes = getCellIndexes(sheet.activeCell);
+            while (isHiddenRow(this.parent.getActiveSheet(), selectedRange[2])) {
+                if (e.keyCode === 40) {
+                    selectedRange[2] = selectedRange[2] + 1;
+                }
+                if (e.keyCode === 38) {
+                    selectedRange[2] = selectedRange[2] - 1;
+                }
+            }
+            this.parent.selectRange(getRangeAddress(selectedRange));
+            this.scrollNavigation([isColumnSelected(sheet, selectedRange) ? activeIdxes[0] : selectedRange[2],
+                isRowSelected(sheet, selectedRange) ? activeIdxes[1] : selectedRange[3]], false);
+        }
+    };
+    KeyboardNavigation.prototype.scrollNavigation = function (actIdxes, isScroll, scrollToCell) {
+        if (!this.parent.allowScrolling) {
+            return;
+        }
+        var x = this.parent.enableRtl ? -1 : 1;
+        var cont = this.parent.getMainContent().parentElement;
+        var hCont = this.parent.getScrollElement();
+        var sheet = this.parent.getActiveSheet();
+        var selectedRange = getSwapRange(getRangeIndexes(sheet.selectedRange));
+        var topLeftIdxes = getCellIndexes(sheet.topLeftCell);
+        var frozenRow = this.parent.frozenRowCount(sheet);
+        var frozenCol = this.parent.frozenColCount(sheet);
+        var paneTopLeftIdxes = getCellIndexes(sheet.paneTopLeftCell);
+        var topIdx = skipHiddenIdx(sheet, actIdxes[0] < frozenRow ? topLeftIdxes[0] : paneTopLeftIdxes[0], true);
+        var leftIdx = actIdxes[1] < frozenCol ? topLeftIdxes[1] : paneTopLeftIdxes[1];
+        var offsetTopSize = this.parent.scrollModule.offset.top.size;
+        if (cont.scrollTop) {
+            if (frozenRow && actIdxes[0] !== selectedRange[2]) {
+                if (actIdxes[0] === frozenRow) {
+                    cont.scrollTop = 0;
+                    return;
+                }
+                if (actIdxes[0] === frozenRow - 1) {
+                    cont.scrollTop = 0;
+                }
+            }
+            else if (actIdxes[0] === skipHiddenIdx(sheet, 0, true)) {
+                cont.scrollTop = 0;
+                return;
+            }
+        }
+        if (hCont && hCont.scrollLeft) {
+            if (frozenCol && actIdxes[1] !== selectedRange[3]) {
+                if (actIdxes[1] === frozenCol) {
+                    hCont.scrollLeft = 0;
+                    return;
+                }
+                if (actIdxes[1] === frozenCol - 1) {
+                    hCont.scrollLeft = 0;
+                }
+            }
+            else if (actIdxes[1] === skipHiddenIdx(sheet, 0, true, 'columns')) {
+                hCont.scrollLeft = 0;
+                return;
+            }
+        }
+        if ((this.getBottomIdx(topIdx) <= actIdxes[0] || isScroll)) {
+            if (scrollToCell) {
+                cont.scrollTop = offsetTopSize + getRowsHeight(sheet, paneTopLeftIdxes[0], actIdxes[0], true) - cont.getBoundingClientRect().height;
+            }
+            else {
+                cont.scrollTop = offsetTopSize + getRowHeight(sheet, skipHiddenIdx(sheet, paneTopLeftIdxes[0], true), true);
+            }
+        }
+        else if (topIdx > actIdxes[0]) {
+            if (scrollToCell) {
+                cont.scrollTop = offsetTopSize - Math.ceil(getRowsHeight(sheet, paneTopLeftIdxes[0], actIdxes[0], true) + cont.getBoundingClientRect().height);
+            }
+            else {
+                cont.scrollTop = offsetTopSize - Math.ceil(getRowHeight(sheet, actIdxes[0], true));
+                this.parent.scrollModule.isKeyScroll = false;
+            }
+        }
+        var scrollLeftIdx = this.getRightIdx(leftIdx);
+        if ((scrollLeftIdx <= actIdxes[1] || isScroll) && hCont) {
+            if (scrollToCell) {
+                hCont.scrollLeft += getColumnsWidth(sheet, paneTopLeftIdxes[1], actIdxes[1], true) + hCont.getBoundingClientRect().width;
+            }
+            else {
+                hCont.scrollLeft += getColumnWidth(sheet, scrollLeftIdx, null, true) * x;
+            }
+        }
+        else if (leftIdx > actIdxes[1] && hCont) {
+            if (scrollToCell) {
+                hCont.scrollLeft -= getColumnsWidth(sheet, paneTopLeftIdxes[1], actIdxes[1], true) + hCont.getBoundingClientRect().width;
+            }
+            else {
+                hCont.scrollLeft -= getColumnWidth(sheet, actIdxes[1], null, true) * x;
+                this.parent.scrollModule.isKeyScroll = false;
+            }
+        }
+    };
+    KeyboardNavigation.prototype.getBottomIdx = function (top) {
+        var hgt = 0;
+        var sheet = this.parent.getActiveSheet();
+        var viewPortHeight = (sheet.frozenRows ? this.parent.viewport.height - this.parent.sheetModule.getColHeaderHeight(sheet, true) : this.parent.viewport.height) - 17 || 20;
+        for (var i = top;; i++) {
+            hgt += getRowHeight(sheet, i, true);
+            if (hgt >= viewPortHeight) {
+                return i;
+            }
+        }
+    };
+    KeyboardNavigation.prototype.getRightIdx = function (left) {
+        var width = 0;
+        var sheet = this.parent.getActiveSheet();
+        var contWidth = this.parent.getMainContent().parentElement.offsetWidth -
+            this.parent.sheetModule.getRowHeaderWidth(sheet) - this.parent.sheetModule.getScrollSize();
+        for (var i = left;; i++) {
+            width += getColumnWidth(sheet, i, null, true);
+            if (width >= contWidth) {
+                return i;
+            }
+        }
+    };
+    /**
+     * For internal use only - Get the module name.
+     *
+     * @private
+     * @returns {string} - Get the module name.
+     */
+    KeyboardNavigation.prototype.getModuleName = function () {
+        return 'keyboardNavigation';
+    };
+    KeyboardNavigation.prototype.destroy = function () {
+        this.removeEventListener();
+        this.parent = null;
+    };
+    return KeyboardNavigation;
+}());
+export { KeyboardNavigation };

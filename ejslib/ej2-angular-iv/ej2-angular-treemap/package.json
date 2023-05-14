@@ -1,0 +1,91 @@
+{
+  "_from": "@syncfusion/ej2-angular-treemap@*",
+  "_id": "@syncfusion/ej2-angular-treemap@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-JJRRIa8+KK/2V0H7wHvVXV2Ukc54A9MLg1rFmIIkyp8Q8R0QleTtB3IpLsCAQUWCzLVKfJeM0UNGtPQ4dW2GCg==",
+  "_location": "/@syncfusion/ej2-angular-treemap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-treemap@*",
+    "name": "@syncfusion/ej2-angular-treemap",
+    "escapedName": "@syncfusion%2fej2-angular-treemap",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-treemap/-/ej2-angular-treemap-20.1.55.tgz",
+  "_shasum": "3b0ce7b6b7f84ba154d7a1392ec261fe291304ba",
+  "_spec": "@syncfusion/ej2-angular-treemap@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-treemap": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 TreeMap Components for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-treemap.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-treemap.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-treemap.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-treemap.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-treemap.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-treemap.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-treemap.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-treemap.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-treemap.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-treemap.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "ej2-treemap",
+    "web-components",
+    "treemap",
+    "layout",
+    "leaf-node",
+    "levels",
+    "legend",
+    "color-mapping",
+    "labels",
+    "tooltip",
+    "drilldown",
+    "legend",
+    "label-template",
+    "typescript",
+    "angular",
+    "ng-treemap",
+    "ej2-ng-treemap"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-treemap.mjs",
+  "name": "@syncfusion/ej2-angular-treemap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-treemap.d.ts",
+  "version": "20.1.55"
+}

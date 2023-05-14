@@ -1,0 +1,84 @@
+{
+  "_from": "@syncfusion/ej2-angular-heatmap@*",
+  "_id": "@syncfusion/ej2-angular-heatmap@20.1.47",
+  "_inBundle": false,
+  "_integrity": "sha512-5n4e9Z8ZyUo3V52+YfgecmcygjCzCuc14sqltx4SYgVqj6JxjOGRiVZTnCDEu/o9Zt69I+DCx46vUEjVHoTIbw==",
+  "_location": "/@syncfusion/ej2-angular-heatmap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-heatmap@*",
+    "name": "@syncfusion/ej2-angular-heatmap",
+    "escapedName": "@syncfusion%2fej2-angular-heatmap",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-heatmap/-/ej2-angular-heatmap-20.1.47.tgz",
+  "_shasum": "522255df2dfedd6fff6d017e512fa83f91e765ec",
+  "_spec": "@syncfusion/ej2-angular-heatmap@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-heatmap": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Feature rich data visulization control used to visualize the matrix data where the individual values are represented as colors for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-heatmap.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-heatmap.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-heatmap.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-heatmap.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-heatmap.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-heatmap.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-heatmap.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-heatmap.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-heatmap.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-heatmap.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "Syncfusion",
+    "web-components",
+    "data",
+    "matrix chart",
+    "grid chart",
+    "heat map",
+    "bubble heatmap",
+    "angular",
+    "ng",
+    "ng-heatmap",
+    "ej2-ng-heatmap"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-heatmap.mjs",
+  "name": "@syncfusion/ej2-angular-heatmap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-heatmap.d.ts",
+  "version": "20.1.47"
+}

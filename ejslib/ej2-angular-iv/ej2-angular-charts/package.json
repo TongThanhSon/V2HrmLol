@@ -1,0 +1,104 @@
+{
+  "_from": "@syncfusion/ej2-angular-charts@*",
+  "_id": "@syncfusion/ej2-angular-charts@20.1.59",
+  "_inBundle": false,
+  "_integrity": "sha512-lJC6prR4Xf3M5NMRBWMWnqekrCRuFuJS+26tdtNxNRQHIm2bd59kz3Ok3WzZJndtWaBqJ0qqBTFH5upII6dDnQ==",
+  "_location": "/@syncfusion/ej2-angular-charts",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-charts@*",
+    "name": "@syncfusion/ej2-angular-charts",
+    "escapedName": "@syncfusion%2fej2-angular-charts",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-charts/-/ej2-angular-charts-20.1.59.tgz",
+  "_shasum": "c6785da98685b90e2a7741c0a815158dd7f624bd",
+  "_spec": "@syncfusion/ej2-angular-charts@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-charts": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Feature-rich chart control with built-in support for over 25 chart types, technical indictors, trendline, zooming, tooltip, selection, crosshair and trackball. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-charts.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-charts.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-charts.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-charts.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-charts.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-charts.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-charts.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-charts.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-charts.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-charts.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2-chart",
+    "chart",
+    "pie",
+    "ej2-pie",
+    "accumulation-chart",
+    "ej2-rangeNavigator",
+    "rangenavigator",
+    "stockchart",
+    "accumulation",
+    "syncfusion",
+    "web-components",
+    "Javascript",
+    "Typescript",
+    "data",
+    "sparkline",
+    "Sparkline ej2-smithchart",
+    "smithchart",
+    "bulletchart",
+    "syncfusion",
+    "angular",
+    "ng-charts",
+    "ej2-ng-charts",
+    "ng-accumulationchart",
+    "ej2-ng-accumulationchart",
+    "ng-rangenavigator",
+    "ej2-ng-rangenavigator",
+    "ng-sparkline",
+    "ej2-ng-sparkline",
+    "ng-smithchart",
+    "ej2-ng-smithchart",
+    "ng-bulletchart",
+    "ej2-ng-bulletchart"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-charts.mjs",
+  "name": "@syncfusion/ej2-angular-charts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-charts.d.ts",
+  "version": "20.1.59"
+}

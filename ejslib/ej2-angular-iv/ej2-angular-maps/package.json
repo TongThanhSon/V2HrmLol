@@ -1,0 +1,96 @@
+{
+  "_from": "@syncfusion/ej2-angular-maps@*",
+  "_id": "@syncfusion/ej2-angular-maps@20.1.55",
+  "_inBundle": false,
+  "_integrity": "sha512-KkBm03PBjzgIl4iv6jq4VIbWzjYZbrrXXrJ1j+qAHiPou2T+eI2xcEBnabARzMtbs278dQmut1AnYkqLuq8/XQ==",
+  "_location": "/@syncfusion/ej2-angular-maps",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-maps@*",
+    "name": "@syncfusion/ej2-angular-maps",
+    "escapedName": "@syncfusion%2fej2-angular-maps",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-maps/-/ej2-angular-maps-20.1.55.tgz",
+  "_shasum": "a54c290df40ddd0727411ba1b20546586648bbec",
+  "_spec": "@syncfusion/ej2-angular-maps@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-maps": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "The Maps component is used to visualize the geographical data and represent the statistical data of a particular geographical area on earth with user interactivity, and provides various customizing options for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-maps.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-maps.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-maps.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-maps.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-maps.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-maps.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-maps.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-maps.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-maps.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-maps.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "ej2-maps",
+    "web-components",
+    "maps",
+    "shape-data",
+    "OSM",
+    "projection",
+    "bubble",
+    "color-mapping",
+    "marker",
+    "data-label",
+    "navigation-line",
+    "legend",
+    "tooltip",
+    "zooming",
+    "panning",
+    "drilldown",
+    "annotation",
+    "custom-shapes",
+    "typescript",
+    "angular",
+    "ng-maps",
+    "ej2-ng-maps"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-maps.mjs",
+  "name": "@syncfusion/ej2-angular-maps",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-maps.d.ts",
+  "version": "20.1.55"
+}

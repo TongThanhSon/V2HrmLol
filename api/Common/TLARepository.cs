@@ -13,6 +13,8 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 using System.IO;
+using Common.DAO;
+using Common.DataContractCore.Base;
 
 namespace Common.Repositories
 {
@@ -49,6 +51,9 @@ namespace Common.Repositories
         protected readonly DbSet<TEntity> _entities;
         protected TLAQueryData QueryData;
         private TLAContext _tlaDbContext => (TLAContext)_context;
+
+        readonly IDBManager<DBAction.System> _dbManager;
+
         public TLARepository(DbContext context)
         {
             _context = context;

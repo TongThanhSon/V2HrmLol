@@ -1,0 +1,81 @@
+{
+  "_from": "@syncfusion/ej2-angular-richtexteditor@*",
+  "_id": "@syncfusion/ej2-angular-richtexteditor@20.1.60",
+  "_inBundle": false,
+  "_integrity": "sha512-mR3uWjTYu+di/RojoVaVa5VBi6OwTqqJi0dPF+FbrW/QC1/A/1KuWbt1VHM0OFenehx77KD7kOaW3PYb1FMo+Q==",
+  "_location": "/@syncfusion/ej2-angular-richtexteditor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-richtexteditor@*",
+    "name": "@syncfusion/ej2-angular-richtexteditor",
+    "escapedName": "@syncfusion%2fej2-angular-richtexteditor",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-richtexteditor/-/ej2-angular-richtexteditor-20.1.60.tgz",
+  "_shasum": "fa4f7a8d1d8528db4c1882dc987146272b6cc8d1",
+  "_spec": "@syncfusion/ej2-angular-richtexteditor@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-richtexteditor": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Essential JS 2 RichTextEditor component for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-richtexteditor.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-richtexteditor.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-richtexteditor.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-richtexteditor.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-richtexteditor.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-richtexteditor.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-richtexteditor.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-richtexteditor.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-richtexteditor.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-richtexteditor.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "markdown editor",
+    "HTML5 rich text editor",
+    "wysiwyg",
+    "wysiwyg html editor",
+    "wysiwyg markdown editor",
+    "angular rich text editor",
+    "angular html editor",
+    "angular markdown editor",
+    "angular wysiwyg editor"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-richtexteditor.mjs",
+  "name": "@syncfusion/ej2-angular-richtexteditor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-richtexteditor.d.ts",
+  "version": "20.1.60"
+}

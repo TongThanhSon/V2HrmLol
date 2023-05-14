@@ -1,0 +1,94 @@
+{
+  "_from": "@syncfusion/ej2-angular-schedule@*",
+  "_id": "@syncfusion/ej2-angular-schedule@20.1.59",
+  "_inBundle": false,
+  "_integrity": "sha512-2j+qIAWN6afaF3tmunri3BnmXMZz6oaimHuRJ+3HJljELhCWvJxq5IPRvcUfDFAyLPnjFHEYizQ+nNhHdnkQ/g==",
+  "_location": "/@syncfusion/ej2-angular-schedule",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-schedule@*",
+    "name": "@syncfusion/ej2-angular-schedule",
+    "escapedName": "@syncfusion%2fej2-angular-schedule",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-schedule/-/ej2-angular-schedule-20.1.59.tgz",
+  "_shasum": "37d8b1bf0475bb55c3625d04ac5f81db07e6f43f",
+  "_spec": "@syncfusion/ej2-angular-schedule@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-schedule": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "Flexible scheduling library with more built-in features and enhanced customization options similar to outlook and google calendar, allowing the users to plan and manage their appointments with efficient data-binding support. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-schedule.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-schedule.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-schedule.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-schedule.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-schedule.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-schedule.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-schedule.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-schedule.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-schedule.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-schedule.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "schedule",
+    "resources",
+    "multiple-resources",
+    "grouping",
+    "views",
+    "calendar",
+    "appointments",
+    "events",
+    "tasks",
+    "recurrence",
+    "data-binding",
+    "timezone",
+    "recurrence-editor",
+    "agenda",
+    "angular",
+    "ng",
+    "ng-schedule",
+    "ej2-ng-schedule",
+    "angular-schedule"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-schedule.mjs",
+  "name": "@syncfusion/ej2-angular-schedule",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-schedule.d.ts",
+  "version": "20.1.59"
+}

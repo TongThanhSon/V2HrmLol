@@ -1,0 +1,110 @@
+{
+  "_from": "@syncfusion/ej2-angular-splitbuttons@*",
+  "_id": "@syncfusion/ej2-angular-splitbuttons@20.1.47",
+  "_inBundle": false,
+  "_integrity": "sha512-SGOwX97F9qcy/PBk1eiZnv8twfl2aQSbJbQhjaMxMRvnOcij1ddQX1SIV9Wldz6flPgeidP8Hhab8nmW94oFiA==",
+  "_location": "/@syncfusion/ej2-angular-splitbuttons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-splitbuttons@*",
+    "name": "@syncfusion/ej2-angular-splitbuttons",
+    "escapedName": "@syncfusion%2fej2-angular-splitbuttons",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-splitbuttons/-/ej2-angular-splitbuttons-20.1.47.tgz",
+  "_shasum": "723df8774562ab22f06bdf9c45514ade3614ceb8",
+  "_spec": "@syncfusion/ej2-angular-splitbuttons@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-splitbuttons": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "A package of feature-rich Essential JS 2 components such as DropDownButton, SplitButton, ProgressButton and ButtonGroup. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-splitbuttons.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-splitbuttons.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-splitbuttons.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-splitbuttons.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-splitbuttons.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-splitbuttons.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-splitbuttons.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-splitbuttons.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-splitbuttons.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-splitbuttons.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "ej2-splitbuttons",
+    "syncfusion",
+    "ej2 splitbutton",
+    "ej2 dropdownbutton",
+    "ej2 buttongroup",
+    "ej2 progress button",
+    "split button",
+    "splitbutton",
+    "dropdown",
+    "dropdown button",
+    "drop-down button",
+    "dropdownbutton",
+    "dropdown popup",
+    "button group",
+    "buttongroup",
+    "group button",
+    "progress button",
+    "spin button",
+    "animation button",
+    "progress",
+    "spinner",
+    "progress indicator",
+    "angular",
+    "ng",
+    "ej2-ng-splitbuttons",
+    "ng-splitbutton",
+    "ng-dropdownbutton",
+    "ng progress button",
+    "angular progress button",
+    "ng spin button",
+    "angular spin button",
+    "ng progress",
+    "angular progress",
+    "ng progress indicator",
+    "angular progress indicator",
+    "ng spinner",
+    "angular spinner"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-splitbuttons.mjs",
+  "name": "@syncfusion/ej2-angular-splitbuttons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-splitbuttons.d.ts",
+  "version": "20.1.47"
+}

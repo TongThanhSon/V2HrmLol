@@ -1,0 +1,99 @@
+{
+  "_from": "@syncfusion/ej2-angular-lists@*",
+  "_id": "@syncfusion/ej2-angular-lists@20.1.47",
+  "_inBundle": false,
+  "_integrity": "sha512-sX1JD3XM6EJpHfuAg7FTvZqzE2bC7ObgZyGy/bOLygZLQqxn5MP1Fg1F3QYOS/NRCNApPQgn7IhsHw8rhl6+AQ==",
+  "_location": "/@syncfusion/ej2-angular-lists",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-lists@*",
+    "name": "@syncfusion/ej2-angular-lists",
+    "escapedName": "@syncfusion%2fej2-angular-lists",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-lists/-/ej2-angular-lists-20.1.47.tgz",
+  "_shasum": "ecb6fd2981438c98e02869fde6808902c477d796",
+  "_spec": "@syncfusion/ej2-angular-lists@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-lists": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "The listview control allows you to select an item or multiple items from a list-like interface and represents the data in interactive hierarchical structure across different layouts or views. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-lists.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-lists.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-lists.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-lists.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-lists.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-lists.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-lists.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-lists.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-lists.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-lists.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "Syncfusion",
+    "web components",
+    "virtualization",
+    "group list",
+    "check list",
+    "listview with checkbox",
+    "listview template",
+    "material list",
+    "ui listview",
+    "remote listview",
+    "nested view",
+    "data list",
+    "infinite list",
+    "sort",
+    "todo",
+    "list widget",
+    "list component",
+    "mobile list",
+    "list gestures",
+    "es6 list",
+    "dynamic list",
+    "angular listview",
+    "ej2 ng lists",
+    "list component",
+    "ng template",
+    "angular6"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-lists.mjs",
+  "name": "@syncfusion/ej2-angular-lists",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-lists.d.ts",
+  "version": "20.1.47"
+}

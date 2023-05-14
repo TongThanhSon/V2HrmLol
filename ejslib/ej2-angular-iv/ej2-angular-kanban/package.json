@@ -1,0 +1,84 @@
+{
+  "_from": "@syncfusion/ej2-angular-kanban@*",
+  "_id": "@syncfusion/ej2-angular-kanban@20.1.58",
+  "_inBundle": false,
+  "_integrity": "sha512-dvonPhSQAuinRPgBvxf8IycQEv8l9Y6sN7XJP5HIeIcu7dlgWjYKQUf6+xarkydiBVJaixIhrgXLkNfm6SbM1g==",
+  "_location": "/@syncfusion/ej2-angular-kanban",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@syncfusion/ej2-angular-kanban@*",
+    "name": "@syncfusion/ej2-angular-kanban",
+    "escapedName": "@syncfusion%2fej2-angular-kanban",
+    "scope": "@syncfusion",
+    "rawSpec": "*",
+    "saveSpec": null,
+    "fetchSpec": "*"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://nexus.syncfusion.com/repository/ej2-angular-development/@syncfusion/ej2-angular-kanban/-/ej2-angular-kanban-20.1.58.tgz",
+  "_shasum": "054011c2c0e30bb862a81ddedfef171277281232",
+  "_spec": "@syncfusion/ej2-angular-kanban@*",
+  "_where": "/jenkins/workspace/build_hotfix_20.2.0.36_Vol2-3PFI2HL2RYYKD6PJVRBLJHHNM5O7WARMXLQTUBX53VKNZ252NAOA/ivypack",
+  "author": {
+    "name": "Syncfusion Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/syncfusion/ej2-angular-ui-components/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@syncfusion/ej2-angular-base": "*",
+    "@syncfusion/ej2-base": "*",
+    "@syncfusion/ej2-kanban": "*",
+    "tslib": "^2.3.0"
+  },
+  "deprecated": false,
+  "description": "The Kanban board is an efficient way to visualize the workflow at each stage along its path to completion. The most important features available are Swim lane, filtering, and editing. for Angular",
+  "es2020": "fesm2020/syncfusion-ej2-angular-kanban.mjs",
+  "esm2020": "esm2020/syncfusion-ej2-angular-kanban.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./syncfusion-ej2-angular-kanban.d.ts",
+      "esm2020": "./esm2020/syncfusion-ej2-angular-kanban.mjs",
+      "es2020": "./fesm2020/syncfusion-ej2-angular-kanban.mjs",
+      "es2015": "./fesm2015/syncfusion-ej2-angular-kanban.mjs",
+      "node": "./fesm2015/syncfusion-ej2-angular-kanban.mjs",
+      "default": "./fesm2020/syncfusion-ej2-angular-kanban.mjs"
+    }
+  },
+  "fesm2015": "fesm2015/syncfusion-ej2-angular-kanban.mjs",
+  "fesm2020": "fesm2020/syncfusion-ej2-angular-kanban.mjs",
+  "homepage": "https://github.com/syncfusion/ej2-angular-ui-components#readme",
+  "keywords": [
+    "ej2",
+    "syncfusion",
+    "web-components",
+    "kanban",
+    "Kanban-board",
+    "swimlane",
+    "wip",
+    "angular",
+    "ng",
+    "ng-kanban",
+    "angular-kanban",
+    "angular-kanban-board"
+  ],
+  "license": "SEE LICENSE IN license",
+  "module": "fesm2015/syncfusion-ej2-angular-kanban.mjs",
+  "name": "@syncfusion/ej2-angular-kanban",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syncfusion/ej2-angular-ui-components.git"
+  },
+  "schematics": "./schematics/collection.json",
+  "sideEffects": true,
+  "typings": "syncfusion-ej2-angular-kanban.d.ts",
+  "version": "20.1.58"
+}
