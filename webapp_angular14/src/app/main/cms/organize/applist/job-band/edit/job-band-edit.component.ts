@@ -226,7 +226,13 @@ export class JobBandEditComponent implements OnInit {
 
 
 
+
+
+
+
+
     
+
     this._coreService.Post("hr/job-band/update", param).subscribe(
       (res: any) => {
         //check error
